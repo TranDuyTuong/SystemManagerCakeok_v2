@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+                    <div class="d-flex justify-content-center py-4">
+                        <a href="index.html" class="logo d-flex align-items-center w-auto">
+                            <img src="assets/img/logo.png" alt="">
+                            <span class="d-none d-lg-block">CakeOk</span>
+                        </a>
+                    </div><!-- End Logo -->
+
+                    <div class="card mb-3">
+
+                        <div class="card-body">
+
+                            <div class="pt-4 pb-2">
+                                <h5 class="card-title text-center pb-0 fs-4">Đăng Nhập Tài Khoản Của Bạn</h5>
+                                <p class="text-center small">Nhập Vào Email & Mật Khẩu</p>
+                            </div>
+                            <form method="post">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input onkeyup="changeEmail()" type="email" class="form-control" id="yourUsername" name="username" placeholder="Enter Email ..." />
+                                        <div id="ErrorEmail" style="color: red;" class="form-text"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Mật Khẩu</label>
+                                        <input onkeyup="changePassword()" type="password" class="form-control" id="yourPassword" name="password" placeholder="Enter Password ..."/>
+                                        <div id="ErrorPassword" style="color: red;" class="form-text"></div>
+                                    </div>
+                                    <p style="text-align: right; margin-top: -10px;">
+                                        <input type="checkbox" onclick="showPassword()">
+                                    </p>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100" type="submit">Đăng Nhập</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="credits">
+                        Designed by Duy Tường
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+@section Scripts{
+    <script src="~/assets/js/toastr.min.js" asp-append-version="true"></script>
+    <script src="~/assets/js/LoginAndRegiter/Login.js" asp-append-version="true"></script>
+    }
+

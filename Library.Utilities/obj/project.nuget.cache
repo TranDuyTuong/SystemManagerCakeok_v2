@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "GafQ+so8rNhNPrzQ5VfRBfQBnArt6xQEZEHFLWNEF7GgZ4IKAD5jqlsudseFW/0I/Aok2zL3EhI95k3Gh9kAlA==",
+  "success": true,
+  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\Library.Utilities\\Library.Utilities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\duytu\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\duytu\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
