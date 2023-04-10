@@ -26,6 +26,7 @@ using Library.DataTable.TableRotationLuck;
 using Library.DataTable.TableStaff;
 using Library.DataTable.TableUser;
 using Library.DataTable.TableVocher;
+using Library.DomainData.DataExtestion;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -131,6 +132,9 @@ namespace Library.DomainData.DataEF
             modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("AppUserLogins").HasKey(x => x.UserId);
             modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("AppRoleClaims");
             modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserTokens").HasKey(x => x.UserId);
+
+            //Data seeding
+            modelBuilder.Seed();
         }
 
         public DbSet<T_ImageBannerWeb> t_ImageBannerWebs { get; set; }

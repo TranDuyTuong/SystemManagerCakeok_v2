@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dziWZ1CmxxQj4raAzKR+XZk2s44Wz7mnPZzwUl1oSt4bR/TKyQ3LCMIpw66Oii2ZS+P3CSuf2AMDdA7HjhYs+Q==",
+  "dgSpecHash": "pQrr2IUpVjMPLoo6VptSgZ2Ymh78qguo8qujGmJoNI67MtWhHijzvSknc7esMPvC1vfB0gyMn96bfTQHGc6Ztw==",
   "success": true,
-  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\ManagerCakeOk\\ManagerCakeOk.csproj",
+  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duytu\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

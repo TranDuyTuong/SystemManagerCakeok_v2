@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\Library.ServiceUser\\Library.ServiceUser.csproj": {}
+    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ServiceUser\\Library.ServiceUser.csproj": {}
   },
   "projects": {
-    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\Library.ServiceUser\\Library.ServiceUser.csproj": {
+    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ServiceUser\\Library.ServiceUser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\Library.ServiceUser\\Library.ServiceUser.csproj",
+        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ServiceUser\\Library.ServiceUser.csproj",
         "projectName": "Library.ServiceUser",
-        "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\Library.ServiceUser\\Library.ServiceUser.csproj",
+        "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ServiceUser\\Library.ServiceUser.csproj",
         "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
-        "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\Library.ServiceUser\\obj\\",
+        "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ServiceUser\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",

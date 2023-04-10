@@ -127,11 +127,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\Library.Utilities\\Library.Utilities.csproj",
+      "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.Utilities\\Library.Utilities.csproj",
       "projectName": "Library.Utilities",
-      "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\Library.Utilities\\Library.Utilities.csproj",
+      "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.Utilities\\Library.Utilities.csproj",
       "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
-      "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\Library.Utilities\\obj\\",
+      "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",

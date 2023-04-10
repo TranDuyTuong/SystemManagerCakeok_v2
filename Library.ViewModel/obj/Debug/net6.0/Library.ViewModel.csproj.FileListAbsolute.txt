@@ -10,3 +10,15 @@ D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SystemCakeOk\Library.ViewModel\
 D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SystemCakeOk\Library.ViewModel\obj\Debug\net6.0\refint\Library.ViewModel.dll
 D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SystemCakeOk\Library.ViewModel\obj\Debug\net6.0\Library.ViewModel.pdb
 D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SystemCakeOk\Library.ViewModel\obj\Debug\net6.0\ref\Library.ViewModel.dll
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\bin\Debug\net6.0\Library.ViewModel.deps.json
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\bin\Debug\net6.0\Library.ViewModel.dll
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\bin\Debug\net6.0\Library.ViewModel.pdb
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\obj\Debug\net6.0\Library.ViewModel.csproj.AssemblyReference.cache
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\obj\Debug\net6.0\Library.ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\obj\Debug\net6.0\Library.ViewModel.AssemblyInfoInputs.cache
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\obj\Debug\net6.0\Library.ViewModel.AssemblyInfo.cs
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\obj\Debug\net6.0\Library.ViewModel.csproj.CoreCompileInputs.cache
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\obj\Debug\net6.0\Library.ViewModel.dll
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\obj\Debug\net6.0\refint\Library.ViewModel.dll
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\obj\Debug\net6.0\Library.ViewModel.pdb
+D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.ViewModel\obj\Debug\net6.0\ref\Library.ViewModel.dll

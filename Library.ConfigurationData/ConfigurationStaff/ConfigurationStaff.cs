@@ -21,10 +21,7 @@ namespace Library.ConfigurationData.ConfigurationStaff
             builder.Property(x => x.Address).IsRequired().HasMaxLength(200).HasColumnType("Nvarchar(200)");
             builder.Property(x => x.Phone).IsRequired().HasMaxLength(15);
             builder.Property(x => x.IDCode).IsRequired().HasMaxLength(100);
-            builder.Property(x => x.ContentFile).IsRequired().HasColumnType("Nvarchar(MAX)"); ;
-            builder.Property(x => x.FileName).IsRequired();
-            builder.Property(x => x.TypeImage).IsRequired().HasMaxLength(20);
-            builder.Property(x => x.MimeType).IsRequired();
+            builder.Property(x => x.ContentFile).HasColumnType("Nvarchar(MAX)"); ;
             builder.Property(x => x.CreateDate).IsRequired();
 
             builder.Property(x => x.IDMarriage).IsRequired();

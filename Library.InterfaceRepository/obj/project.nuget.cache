@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mG72eMAihtJJJ+nOlDCQ1gcTvORh4Ji3wUmqW/qzCag4q7JO24UE3OsYhFbyEEBr5j6eE6IJSrQ0qsosQAyxAA==",
+  "dgSpecHash": "+IQqCJGVoQ7inb+x1c4JGlFu3nS6WEXpXDE/KY6N+i+dXAmAvwuG8BlgL1jG6M9oVVniIA0PrDYmQLu2pqwyzg==",
   "success": true,
-  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SystemCakeOk\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj",
+  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.4\\microsoft.aspnetcore.cryptography.internal.7.0.4.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.4\\microsoft.aspnetcore.cryptography.keyderivation.7.0.4.nupkg.sha512",
