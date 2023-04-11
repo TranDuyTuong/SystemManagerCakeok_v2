@@ -13,6 +13,7 @@
           "Library.Repository": "1.0.0",
           "Library.ServiceAdmin": "1.0.0",
           "Library.ServiceUser": "1.0.0",
+          "Library.ViewModel": "1.0.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.17.2",
           "Swashbuckle.AspNetCore": "6.2.3"
         },

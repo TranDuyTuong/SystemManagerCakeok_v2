@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -14,15 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ServiceAdmin_Api\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Library.DataTable\Library.DataTable.csproj" />
     <ProjectReference Include="..\Library.DomainData\Library.DomainData.csproj" />
     <ProjectReference Include="..\Library.Repository\Library.Repository.csproj" />
     <ProjectReference Include="..\Library.ServiceAdmin\Library.ServiceAdmin.csproj" />
     <ProjectReference Include="..\Library.ServiceUser\Library.ServiceUser.csproj" />
+    <ProjectReference Include="..\Library.ViewModel\Library.ViewModel.csproj" />
   </ItemGroup>
 
 </Project>

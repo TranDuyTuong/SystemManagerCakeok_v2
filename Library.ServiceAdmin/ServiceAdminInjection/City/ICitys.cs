@@ -10,7 +10,7 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
     public interface ICitys
     {
         //Create a City
-        bool CreateCity(CreateCity request);
+        NotificationCity CreateCity(CreateCity request);
 
         //Create Muplite Citys
         NotificationCity CreateMupliteCity(List<CreateCity> request);

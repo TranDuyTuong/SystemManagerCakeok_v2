@@ -9,5 +9,7 @@ namespace Library.ViewModel.Admin.V_City
     public class NotificationCity
     {
         public int Id { get; set; }
+        public bool StatusCity { get; set; }
+        public string Message { get; set; }
     }
 }

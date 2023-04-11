@@ -20,7 +20,7 @@ namespace Library.ConfigurationData.ConfigurationStaff
             builder.Property(x => x.Birthday).IsRequired();
             builder.Property(x => x.Address).IsRequired().HasMaxLength(200).HasColumnType("Nvarchar(200)");
             builder.Property(x => x.Phone).IsRequired().HasMaxLength(15);
-            builder.Property(x => x.IDCode).IsRequired().HasMaxLength(100);
+            builder.Property(x => x.IDCode).IsRequired().HasMaxLength(200);
             builder.Property(x => x.ContentFile).HasColumnType("Nvarchar(MAX)"); ;
             builder.Property(x => x.CreateDate).IsRequired();
 

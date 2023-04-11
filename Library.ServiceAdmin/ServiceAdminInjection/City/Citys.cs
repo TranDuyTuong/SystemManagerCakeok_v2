@@ -48,14 +48,30 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
         }
 
         //create a city
-        public bool CreateCity(CreateCity request)
+        public NotificationCity CreateCity(CreateCity request)
         {
-            var CreateData = new T_City();
-            CreateData.Name = request.NameCity;
-            CreateData.Status = request.Status;
-            unitOfWork.cityRepo.Add(CreateData);
-            unitOfWork.Commit();
-            return true;
+            var notification = new NotificationCity();        
+            // TODO: CHECK NAME CITY IN DATA
+            var query = unitOfWork.cityRepo.GetAll();
+            var checkNameCity = query.FirstOrDefault(x => x.Name.Equals(request.NameCity));
+            if(checkNameCity != null)
+            {
+                notification.StatusCity = false;
+                notification.Message = "City already exist!";
+            }
+            else
+            {
+                // TODO: CREATE CITY
+                var CreateData = new T_City();
+                CreateData.Name = request.NameCity;
+                CreateData.Status = request.Status;
+                unitOfWork.cityRepo.Add(CreateData);
+                unitOfWork.Commit();
+
+                notification.StatusCity = true;
+                notification.Message = "Create City Successfully!";
+            }
+            return notification;
         }
 
         //create Muplite city

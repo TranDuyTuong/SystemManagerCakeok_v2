@@ -19,10 +19,10 @@ namespace Library.DataTable.TableStaff
         public string Address { get; set; }
         public string Phone { get; set; }
         public string IDCode { get; set; }
-        public byte[] ContentFile { get; set; }
-        public string FileName { get; set; }
-        public string TypeImage { get; set; }
-        public string MimeType { get; set; }
+        public byte[]? ContentFile { get; set; }
+        public string? FileName { get; set; }
+        public string? TypeImage { get; set; }
+        public string? MimeType { get; set; }
         public DateTime CreateDate { get; set; }
 
 

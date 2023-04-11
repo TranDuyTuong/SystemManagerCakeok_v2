@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj": {}
+    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj": {}
   },
   "projects": {
-    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ConfigurationData\\Library.ConfigurationData.csproj": {
+    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ConfigurationData\\Library.ConfigurationData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ConfigurationData\\Library.ConfigurationData.csproj",
+        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ConfigurationData\\Library.ConfigurationData.csproj",
         "projectName": "Library.ConfigurationData",
-        "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ConfigurationData\\Library.ConfigurationData.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ConfigurationData\\obj\\",
+        "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ConfigurationData\\Library.ConfigurationData.csproj",
+        "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
+        "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ConfigurationData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj": {
-                "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj"
+              "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj": {
+                "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj"
               }
             }
           }
@@ -69,17 +69,17 @@
         }
       }
     },
-    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj": {
+    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj",
+        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj",
         "projectName": "Library.DataTable",
-        "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\obj\\",
+        "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj",
+        "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
+        "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,17 +130,17 @@
         }
       }
     },
-    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DomainData\\Library.DomainData.csproj": {
+    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DomainData\\Library.DomainData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DomainData\\Library.DomainData.csproj",
+        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DomainData\\Library.DomainData.csproj",
         "projectName": "Library.DomainData",
-        "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DomainData\\Library.DomainData.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DomainData\\obj\\",
+        "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DomainData\\Library.DomainData.csproj",
+        "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
+        "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DomainData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -154,11 +154,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ConfigurationData\\Library.ConfigurationData.csproj": {
-                "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ConfigurationData\\Library.ConfigurationData.csproj"
+              "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ConfigurationData\\Library.ConfigurationData.csproj": {
+                "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ConfigurationData\\Library.ConfigurationData.csproj"
               },
-              "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj": {
-                "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj"
+              "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj": {
+                "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj"
               }
             }
           }
@@ -222,17 +222,17 @@
         }
       }
     },
-    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj": {
+    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj",
+        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj",
         "projectName": "Library.InterfaceRepository",
-        "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\obj\\",
+        "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj",
+        "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
+        "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -246,8 +246,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj": {
-                "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj"
+              "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj": {
+                "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj"
               }
             }
           }
@@ -281,17 +281,17 @@
         }
       }
     },
-    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.Repository\\Library.Repository.csproj": {
+    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.Repository\\Library.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.Repository\\Library.Repository.csproj",
+        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.Repository\\Library.Repository.csproj",
         "projectName": "Library.Repository",
-        "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.Repository\\Library.Repository.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.Repository\\obj\\",
+        "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.Repository\\Library.Repository.csproj",
+        "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
+        "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -305,11 +305,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DomainData\\Library.DomainData.csproj": {
-                "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DomainData\\Library.DomainData.csproj"
+              "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DomainData\\Library.DomainData.csproj": {
+                "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DomainData\\Library.DomainData.csproj"
               },
-              "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj": {
-                "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj"
+              "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj": {
+                "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.InterfaceRepository\\Library.InterfaceRepository.csproj"
               }
             }
           }
@@ -343,17 +343,17 @@
         }
       }
     },
-    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj": {
+    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj",
+        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj",
         "projectName": "Library.ServiceAdmin",
-        "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ServiceAdmin\\obj\\",
+        "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj",
+        "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
+        "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ServiceAdmin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -367,14 +367,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj": {
-                "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj"
+              "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj": {
+                "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.DataTable\\Library.DataTable.csproj"
               },
-              "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.Repository\\Library.Repository.csproj": {
-                "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.Repository\\Library.Repository.csproj"
+              "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.Repository\\Library.Repository.csproj": {
+                "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.Repository\\Library.Repository.csproj"
               },
-              "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj": {
-                "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj"
+              "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj": {
+                "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj"
               }
             }
           }
@@ -408,17 +408,17 @@
         }
       }
     },
-    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj": {
+    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj",
+        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj",
         "projectName": "Library.ViewModel",
-        "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\obj\\",
+        "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj",
+        "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
+        "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ViewModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
