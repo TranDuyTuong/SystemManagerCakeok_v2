@@ -19,8 +19,7 @@ namespace Library.ConfigurationData.ConfigurationOrder
             builder.Property(x => x.CreateDate).HasColumnType("datetime").IsRequired();
             builder.Property(x => x.IDOrder).IsRequired();
 
-            builder.HasOne<T_Order>().WithMany().HasPrincipalKey(x => x.IDOrder)
-                                    .HasForeignKey(x => x.IDOrder).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Order).WithMany(x => x.t_CancelOrders).HasForeignKey(x => x.IDOrder).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

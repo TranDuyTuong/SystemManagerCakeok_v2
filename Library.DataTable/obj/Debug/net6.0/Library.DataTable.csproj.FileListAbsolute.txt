@@ -22,3 +22,15 @@ D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManag
 D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\refint\Library.DataTable.dll
 D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\Library.DataTable.pdb
 D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\ref\Library.DataTable.dll
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\bin\Debug\net6.0\Library.DataTable.deps.json
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\bin\Debug\net6.0\Library.DataTable.dll
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\bin\Debug\net6.0\Library.DataTable.pdb
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\Library.DataTable.csproj.AssemblyReference.cache
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\Library.DataTable.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\Library.DataTable.AssemblyInfoInputs.cache
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\Library.DataTable.AssemblyInfo.cs
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\Library.DataTable.csproj.CoreCompileInputs.cache
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\Library.DataTable.dll
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\refint\Library.DataTable.dll
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\Library.DataTable.pdb
+D:\Project\v_2\SystemManagerCakeok_v2\Library.DataTable\obj\Debug\net6.0\ref\Library.DataTable.dll

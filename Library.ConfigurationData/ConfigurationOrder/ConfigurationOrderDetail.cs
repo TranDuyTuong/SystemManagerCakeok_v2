@@ -26,20 +26,11 @@ namespace Library.ConfigurationData.ConfigurationOrder
             builder.Property(x => x.IDGift).IsRequired();
             builder.Property(x => x.IDSmell).IsRequired();
 
-            builder.HasOne<T_Staff>().WithMany().HasPrincipalKey(x => x.IDStaff)
-                                    .HasForeignKey(x => x.IDStaff).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Order>().WithMany().HasPrincipalKey(x => x.IDOrder)
-                                    .HasForeignKey(x => x.IDOrder).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Cake>().WithMany().HasPrincipalKey(x => x.IDCake)
-                                    .HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Gift>().WithMany().HasPrincipalKey(x => x.IDGift)
-                                    .HasForeignKey(x => x.IDGift).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_SmellCake>().WithMany().HasPrincipalKey(x => x.IDSmell)
-                                    .HasForeignKey(x => x.IDSmell).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Staff).WithMany(x => x.t_OrderDetails).HasForeignKey(x => x.IDStaff).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Order).WithMany(x => x.t_OrderDetails).HasForeignKey(x => x.IDOrder).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Cake).WithMany(x => x.t_OrderDetails).HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Gift).WithMany(x => x.t_OrderDetails).HasForeignKey(x => x.IDGift).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_SmellCake).WithMany(x => x.t_OrderDetails).HasForeignKey(x => x.IDSmell).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

@@ -25,6 +25,9 @@ namespace Library.ConfigurationData.ConfigurationRotaionLuck
 
             builder.HasOne<T_Customer>().WithMany().HasPrincipalKey(x => x.IDUser)
                                     .HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasOne(x => x.t_GiftLuck).WithMany(x => x.t_HistoryGetGiftUserRotaionLucks).HasForeignKey(x => x.IDLuck).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Customer).WithMany(x => x.t_HistoryGetGiftUserRotaionLucks).HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

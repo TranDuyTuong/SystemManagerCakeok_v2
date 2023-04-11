@@ -23,11 +23,8 @@ namespace Library.ConfigurationData.ConfigurationRole
             builder.Property(x => x.IDStaff).IsRequired();
             builder.Property(x => x.CreateDate).IsRequired();
 
-            builder.HasOne<T_Role>().WithMany().HasPrincipalKey(x => x.IDRole)
-                                    .HasForeignKey(x => x.IDRole).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Staff>().WithMany().HasPrincipalKey(x => x.IDStaff)
-                                    .HasForeignKey(x => x.IDStaff).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Role).WithMany(x => x.t_UserRoles).HasForeignKey(x => x.IDRole).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Staff).WithMany(x => x.t_UserRoles).HasForeignKey(x => x.IDStaff).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

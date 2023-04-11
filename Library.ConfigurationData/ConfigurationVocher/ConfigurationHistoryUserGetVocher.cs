@@ -22,11 +22,8 @@ namespace Library.ConfigurationData.ConfigurationVocher
             builder.Property(x => x.IDUser).IsRequired();
             builder.Property(x => x.IDVocher).IsRequired();
 
-            builder.HasOne<T_Customer>().WithMany().HasPrincipalKey(x => x.IDUser)
-                                    .HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Vocher>().WithMany().HasPrincipalKey(x => x.IDVocher)
-                                    .HasForeignKey(x => x.IDVocher).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Customer).WithMany(x => x.t_HistoryUserGetVochers).HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Vocher).WithMany(x => x.t_HistoryUserGetVocher).HasForeignKey(x => x.IDVocher).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

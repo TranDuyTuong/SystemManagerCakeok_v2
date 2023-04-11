@@ -21,11 +21,8 @@ namespace Library.ConfigurationData.ConfigurationChef
             builder.Property(x => x.IDChef).IsRequired();
             builder.Property(x => x.IDCake).IsRequired();
 
-            builder.HasOne<T_Chef>().WithMany().HasPrincipalKey(x => x.IDChef)
-                                    .HasForeignKey(x => x.IDChef).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Cake>().WithMany().HasPrincipalKey(x => x.IDCake)
-                                    .HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Chef).WithMany(x => x.t_ChefCakes).HasForeignKey(x => x.IDChef).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Cake).WithMany(x => x.t_ChefCakes).HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

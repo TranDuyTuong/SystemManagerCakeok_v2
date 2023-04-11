@@ -20,8 +20,7 @@ namespace Library.ConfigurationData.ConfigurationRotaionLuck
             builder.Property(x => x.AmountTakeTurn).IsRequired();
             builder.Property(x => x.IDUser).IsRequired();
 
-            builder.HasOne<T_Customer>().WithMany().HasPrincipalKey(x => x.IDUser)
-                                    .HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Customer).WithMany(x => x.t_TakeTurnsRotaionLucks).HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

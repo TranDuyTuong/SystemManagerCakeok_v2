@@ -27,20 +27,12 @@ namespace Library.ConfigurationData.ConfigurationCakeCustom
             builder.Property(x => x.IDIdea).IsRequired();
             builder.Property(x => x.IDChef).IsRequired();
 
-            builder.HasOne<T_Customer>().WithMany().HasPrincipalKey(x => x.IDUser)
-                                    .HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Customer).WithMany(x => x.t_CustomCakes).HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_StatusCustomCake).WithMany(x => x.t_CustomCakes).HasForeignKey(x => x.IDStatus).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_PayCustomCake).WithMany(x => x.t_CustomCakes).HasForeignKey(x => x.IDPay).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_CakeCustomIdea).WithMany(x => x.t_CustomCakes).HasForeignKey(x => x.IDIdea).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Chef).WithMany(x => x.t_CustomCakes).HasForeignKey(x => x.IDChef).OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne<T_StatusCustomCake>().WithMany().HasPrincipalKey(x => x.IDStatus)
-                                    .HasForeignKey(x => x.IDStatus).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_PayCustomCake>().WithMany().HasPrincipalKey(x => x.IDPay)
-                                    .HasForeignKey(x => x.IDPay).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_CakeCustomIdea>().WithMany().HasPrincipalKey(x => x.IDIdea)
-                                    .HasForeignKey(x => x.IDIdea).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Chef>().WithMany().HasPrincipalKey(x => x.IDChef)
-                                    .HasForeignKey(x => x.IDChef).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

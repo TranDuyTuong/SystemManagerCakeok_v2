@@ -30,5 +30,7 @@ namespace Library.DataTable.TableOrder
 
         public List<T_OrderDetail> t_OrderDetails { get; set; }
 
+        public List<T_CancelOrder> t_CancelOrders { get; set; }
+
     }
 }

@@ -26,8 +26,7 @@ namespace Library.ConfigurationData.ConfigurationInfomationAuthor
             builder.Property(x => x.TypeFile).IsRequired().HasMaxLength(20);
             builder.Property(x => x.IDPosition).IsRequired();
 
-            builder.HasOne<T_Position>().WithMany().HasPrincipalKey(x => x.IDPosition)
-                                    .HasForeignKey(x => x.IDPosition).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Position).WithMany(x => x.t_InformationAuthors).HasForeignKey(x => x.IDPosition).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

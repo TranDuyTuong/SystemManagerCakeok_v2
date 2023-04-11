@@ -26,14 +26,10 @@ namespace Library.ConfigurationData.ConfigurationOrder
             builder.Property(x => x.IDCity).IsRequired();
             builder.Property(x => x.IDDistrict).IsRequired();
 
-            builder.HasOne<T_City>().WithMany().HasPrincipalKey(x => x.IDCity)
-                                    .HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_City).WithMany(x => x.t_InfomationOrders).HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_District).WithMany(x => x.t_InfomationOrders).HasForeignKey(x => x.IDDistrict).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Branch).WithMany(x => x.t_InfomationOrders).HasForeignKey(x => x.IDBrach).OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne<T_District>().WithMany().HasPrincipalKey(x => x.IDDistrict)
-                                    .HasForeignKey(x => x.IDDistrict).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Branch>().WithMany().HasPrincipalKey(x => x.IDBrach)
-                                    .HasForeignKey(x => x.IDBrach).OnDelete(DeleteBehavior.NoAction);
 
         }
     }

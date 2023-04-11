@@ -23,11 +23,8 @@ namespace Library.ConfigurationData.ConfigurationComment
             builder.Property(x => x.IDUser).IsRequired();
             builder.Property(x => x.IDCake).IsRequired();
 
-            builder.HasOne<T_Customer>().WithMany().HasPrincipalKey(x => x.IDUser)
-                                    .HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Cake>().WithMany().HasPrincipalKey(x => x.IDCake)
-                                    .HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Customer).WithMany(x => x.t_Comments).HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Cake).WithMany(x => x.t_Comments).HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

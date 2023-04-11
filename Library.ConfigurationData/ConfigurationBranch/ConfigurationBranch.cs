@@ -26,14 +26,9 @@ namespace Library.ConfigurationData.ConfigurationBranch
             builder.Property(x => x.IDCity).IsRequired();
             builder.Property(x => x.IDDistrict).IsRequired();
 
-            builder.HasOne<T_Regions>().WithMany().HasPrincipalKey(x => x.IDRegion)
-                                                    .HasForeignKey(x => x.IDRegion).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_City>().WithMany().HasPrincipalKey(x => x.IDCity)
-                                                    .HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_District>().WithMany().HasPrincipalKey(x => x.IDDistrict)
-                                                    .HasForeignKey(x => x.IDDistrict).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Regions).WithMany(x => x.t_Branch).HasForeignKey(x => x.IDRegion).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_City).WithMany(x => x.t_Branches).HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_District).WithMany(x => x.t_Branches).HasForeignKey(x => x.IDDistrict).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

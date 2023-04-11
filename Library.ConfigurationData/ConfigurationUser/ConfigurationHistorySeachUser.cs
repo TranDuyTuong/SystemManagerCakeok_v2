@@ -19,8 +19,7 @@ namespace Library.ConfigurationData.ConfigurationUser
             builder.Property(x => x.CreateDate).HasColumnType("datetime").IsRequired();
             builder.Property(x => x.IDUser).IsRequired();
 
-            builder.HasOne<T_Customer>().WithMany().HasPrincipalKey(x => x.IDUser)
-                                    .HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Customer).WithMany(x => x.t_HistorySeachUsers).HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

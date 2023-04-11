@@ -22,11 +22,8 @@ namespace Library.ConfigurationData.ConfigurationCakeCustom
             builder.Property(x => x.IDIdea).IsRequired();
             builder.Property(x => x.IDUser).IsRequired();
 
-            builder.HasOne<T_CakeCustomIdea>().WithMany().HasPrincipalKey(x => x.IDIdea)
-                                    .HasForeignKey(x => x.IDIdea).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Customer>().WithMany().HasPrincipalKey(x => x.IDUser)
-                                    .HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_CakeCustomIdea).WithMany(x => x.t_NotificationCustomCakes).HasForeignKey(x => x.IDIdea).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Customer).WithMany(x => x.t_NotificationCustomCakes).HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

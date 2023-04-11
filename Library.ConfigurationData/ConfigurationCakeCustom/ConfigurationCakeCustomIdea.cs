@@ -25,17 +25,14 @@ namespace Library.ConfigurationData.ConfigurationCakeCustom
             builder.Property(x => x.IDSize).IsRequired();
             builder.Property(x => x.IDStatusIdea).IsRequired();
 
-            builder.HasOne<T_TypeCake>().WithMany().HasPrincipalKey(x => x.IDTypeCake)
-                                    .HasForeignKey(x => x.IDTypeCake).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_TypeCake).WithMany(x => x.t_CakeCustomIdeas).HasForeignKey(x => x.IDTypeCake).OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne<T_Customer>().WithMany().HasPrincipalKey(x => x.IDUser)
-                                    .HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Customer).WithMany(x => x.t_CakeCustomIdeas).HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne<T_SizeCake>().WithMany().HasPrincipalKey(x => x.IDSize)
-                                    .HasForeignKey(x => x.IDSize).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_SizeCake).WithMany(x => x.t_CakeCustomIdea).HasForeignKey(x => x.IDSize).OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne<T_StatusIdea>().WithMany().HasPrincipalKey(x => x.IDStatusIdea)
-                                    .HasForeignKey(x => x.IDStatusIdea).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_StatusIdea).WithMany(x => x.t_CakeCustomIdea).HasForeignKey(x => x.IDStatusIdea).OnDelete(DeleteBehavior.NoAction);
+
         }
     }
 }

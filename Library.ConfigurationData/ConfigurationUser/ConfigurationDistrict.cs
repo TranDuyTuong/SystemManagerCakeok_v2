@@ -20,8 +20,7 @@ namespace Library.ConfigurationData.ConfigurationUser
             builder.Property(x => x.Status).IsRequired();
             builder.Property(x => x.IDCity).IsRequired();
 
-            builder.HasOne<T_City>().WithMany().HasPrincipalKey(x => x.IDCity)
-                                    .HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_City).WithMany(x => x.t_Districts).HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

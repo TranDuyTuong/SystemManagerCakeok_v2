@@ -21,8 +21,7 @@ namespace Library.ConfigurationData.ConfigurationChef
             builder.Property(x => x.Experience).IsRequired();
             builder.Property(x => x.IDStaff).IsRequired();
 
-            builder.HasOne<T_Staff>().WithMany().HasPrincipalKey(x => x.IDStaff)
-                                    .HasForeignKey(x => x.IDStaff).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Staff).WithMany(x => x.t_Chefs).HasForeignKey(x => x.IDStaff).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

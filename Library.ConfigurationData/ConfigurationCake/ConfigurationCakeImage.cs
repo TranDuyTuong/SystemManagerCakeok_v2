@@ -23,8 +23,7 @@ namespace Library.ConfigurationData.ConfigurationCake
             builder.Property(x => x.MainImage).IsRequired();
             builder.Property(x => x.IDCake).IsRequired();
 
-            builder.HasOne<T_Cake>().WithMany().HasPrincipalKey(x => x.IDCake)
-                                        .HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Cake).WithMany(x => x.t_CakeImages).HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

@@ -21,11 +21,8 @@ namespace Library.ConfigurationData.ConfigurationUser
             builder.Property(x => x.IDCake).IsRequired();
             builder.Property(x => x.Amount).IsRequired();
 
-            builder.HasOne<T_Customer>().WithMany().HasPrincipalKey(x => x.IDUser)
-                                    .HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Cake>().WithMany().HasPrincipalKey(x => x.IDCake)
-                                    .HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Customer).WithMany(x => x.t_ViewerCakeUsers).HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Cake).WithMany(x => x.t_ViewerCakeUsers).HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

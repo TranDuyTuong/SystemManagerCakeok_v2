@@ -25,20 +25,11 @@ namespace Library.ConfigurationData.ConfigurationCakeCustom
             builder.Property(x => x.IDCustom).IsRequired();
             builder.Property(x => x.IDStaff).IsRequired();
 
-            builder.HasOne<T_CustomCakePrice>().WithMany().HasPrincipalKey(x => x.IDPriceCustom)
-                                    .HasForeignKey(x => x.IDPriceCustom).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_PayCustomCake>().WithMany().HasPrincipalKey(x => x.IDPay)
-                                    .HasForeignKey(x => x.IDPay).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_TypePayCustomCake>().WithMany().HasPrincipalKey(x => x.IDTypePay)
-                                    .HasForeignKey(x => x.IDTypePay).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_CustomCake>().WithMany().HasPrincipalKey(x => x.IDCustom)
-                                    .HasForeignKey(x => x.IDCustom).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Staff>().WithMany().HasPrincipalKey(x => x.IDStaff)
-                                    .HasForeignKey(x => x.IDStaff).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_CustomCakePrice).WithMany(x => x.t_BillCakeCustoms).HasForeignKey(x => x.IDPriceCustom).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_PayCustomCake).WithMany(x => x.t_BillCakeCustom).HasForeignKey(x => x.IDPay).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_TypePayCustomCake).WithMany(x => x.t_BillCakeCustoms).HasForeignKey(x => x.IDTypePay).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_CustomCake).WithMany(x => x.t_BillCakeCustom).HasForeignKey(x => x.IDCustom).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Staff).WithMany(x => x.t_BillCakeCustoms).HasForeignKey(x => x.IDStaff).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

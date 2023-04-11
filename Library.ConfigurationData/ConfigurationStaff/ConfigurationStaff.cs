@@ -32,26 +32,13 @@ namespace Library.ConfigurationData.ConfigurationStaff
             builder.Property(x => x.IDGender).IsRequired();
             builder.Property(x => x.IDStaffOrChef).IsRequired();
 
-            builder.HasOne<T_Marriage>().WithMany().HasPrincipalKey(x => x.IDMarriage)
-                                    .HasForeignKey(x => x.IDMarriage).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_User>().WithMany().HasPrincipalKey(x => x.IDAccount)
-                                    .HasForeignKey(x => x.IDAccount).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_CustomerOrStaff>().WithMany().HasPrincipalKey(x => x.IDCustomerOrStaff)
-                                    .HasForeignKey(x => x.IDCustomerOrStaff).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_City>().WithMany().HasPrincipalKey(x => x.IDCity)
-                                    .HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_District>().WithMany().HasPrincipalKey(x => x.IDDistrict)
-                                    .HasForeignKey(x => x.IDDistrict).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Gender>().WithMany().HasPrincipalKey(x => x.IDGender)
-                                    .HasForeignKey(x => x.IDGender).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_StaffOrChef>().WithMany().HasPrincipalKey(x => x.IDStaffOrChef)
-                                    .HasForeignKey(x => x.IDStaffOrChef).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Marriage).WithMany(x => x.t_Staffs).HasForeignKey(x => x.IDMarriage).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_User).WithMany(x => x.t_Staffs).HasForeignKey(x => x.IDAccount).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_CustomerOrStaff).WithMany(x => x.t_Staffs).HasForeignKey(x => x.IDCustomerOrStaff).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_City).WithMany(x => x.t_Staffs).HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_District).WithMany(x => x.t_Staffs).HasForeignKey(x => x.IDDistrict).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Gender).WithMany(x => x.t_Staffs).HasForeignKey(x => x.IDGender).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_StaffOrChef).WithMany(x => x.t_Staffs).HasForeignKey(x => x.IDStaffOrChef).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

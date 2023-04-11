@@ -19,11 +19,10 @@ namespace Library.ConfigurationData.ConfigurationCake
             builder.Property(x => x.IDGift).IsRequired();
             builder.Property(x => x.CreateDate).HasColumnType("datetime").IsRequired();
 
-            builder.HasOne<T_Cake>().WithMany().HasPrincipalKey(x => x.IDCake)
-                                        .HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Cake).WithMany(x => x.t_CakeGifts).HasForeignKey(x => x.IDCake).OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne<T_Gift>().WithMany().HasPrincipalKey(x => x.IDGift)
-                                        .HasForeignKey(x => x.IDGift).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Gift).WithMany(x => x.t_CakeGifts).HasForeignKey(x => x.IDGift).OnDelete(DeleteBehavior.NoAction);
+
         }
     }
 }

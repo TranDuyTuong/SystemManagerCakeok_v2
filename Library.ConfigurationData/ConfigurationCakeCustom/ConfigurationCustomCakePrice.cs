@@ -19,8 +19,7 @@ namespace Library.ConfigurationData.ConfigurationCakeCustom
             builder.Property(x => x.CreateDate).HasColumnType("datetime").IsRequired();
             builder.Property(x => x.IDCustom).IsRequired();
 
-            builder.HasOne<T_CustomCake>().WithMany().HasPrincipalKey(x => x.IDCustom)
-                                    .HasForeignKey(x => x.IDCustom).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_CustomCake).WithMany(x => x.t_CustomCakePrices).HasForeignKey(x => x.IDCustom).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

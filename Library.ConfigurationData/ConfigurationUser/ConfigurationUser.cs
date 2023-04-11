@@ -20,8 +20,7 @@ namespace Library.ConfigurationData.ConfigurationUser
             builder.Property(x => x.IDCustomerOrStaff).IsRequired();
             builder.Property(x => x.UserName).IsRequired().HasMaxLength(50);
 
-            builder.HasOne<T_CustomerOrStaff>().WithMany().HasPrincipalKey(x => x.IDCustomerOrStaff)
-                                    .HasForeignKey(x => x.IDCustomerOrStaff).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_CustomerOrStaff).WithMany(x => x.t_Users).HasForeignKey(x => x.IDCustomerOrStaff).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

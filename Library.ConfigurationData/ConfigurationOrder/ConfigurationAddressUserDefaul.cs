@@ -24,17 +24,10 @@ namespace Library.ConfigurationData.ConfigurationOrder
             builder.Property(x => x.IDDistrict).IsRequired();
             builder.Property(x => x.IDUser).IsRequired();
 
-            builder.HasOne<T_TypeAddress>().WithMany().HasPrincipalKey(x => x.IDTypeAddress)
-                                    .HasForeignKey(x => x.IDTypeAddress).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_City>().WithMany().HasPrincipalKey(x => x.IDCity)
-                                    .HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_District>().WithMany().HasPrincipalKey(x => x.IDDistrict)
-                                    .HasForeignKey(x => x.IDDistrict).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Customer>().WithMany().HasPrincipalKey(x => x.IDUser)
-                                    .HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_TypeAddress).WithMany(x => x.t_AddressUserDefaul).HasForeignKey(x => x.IDTypeAddress).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_City).WithMany(x => x.t_AddressUserDefauls).HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_District).WithMany(x => x.t_AddressUserDefauls).HasForeignKey(x => x.IDDistrict).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Customer).WithMany(x => x.t_AddressUserDefauls).HasForeignKey(x => x.IDUser).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

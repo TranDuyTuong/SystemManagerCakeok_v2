@@ -19,8 +19,7 @@ namespace Library.ConfigurationData.ConfigurationRotaionLuck
             builder.Property(x => x.PercentPage).IsRequired();
             builder.Property(x => x.IDLuck).IsRequired();
 
-            builder.HasOne<T_GiftLuck>().WithMany().HasPrincipalKey(x => x.IDLuck)
-                                    .HasForeignKey(x => x.IDLuck).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_GiftLuck).WithMany(x => x.t_RotationLucks).HasForeignKey(x => x.IDLuck).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

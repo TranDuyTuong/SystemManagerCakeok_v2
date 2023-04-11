@@ -30,23 +30,12 @@ namespace Library.ConfigurationData.ConfigurationUser
             builder.Property(x => x.IDCustomerOrStaff).IsRequired();
             builder.Property(x => x.IDAccount).IsRequired();
 
-            builder.HasOne<T_City>().WithMany().HasPrincipalKey(x => x.IDCity)
-                                    .HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_District>().WithMany().HasPrincipalKey(x => x.IDDistrict)
-                                    .HasForeignKey(x => x.IDDistrict).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Gender>().WithMany().HasPrincipalKey(x => x.IDGender)
-                                    .HasForeignKey(x => x.IDGender).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_Country>().WithMany().HasPrincipalKey(x => x.IDCountry)
-                                    .HasForeignKey(x => x.IDCountry).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_CustomerOrStaff>().WithMany().HasPrincipalKey(x => x.IDCustomerOrStaff)
-                                    .HasForeignKey(x => x.IDCustomerOrStaff).OnDelete(DeleteBehavior.NoAction);
-
-            builder.HasOne<T_User>().WithMany().HasPrincipalKey(x => x.IDAccount)
-                                    .HasForeignKey(x => x.IDAccount).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_City).WithMany(x => x.t_Customers).HasForeignKey(x => x.IDCity).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_District).WithMany(x => x.t_Customers).HasForeignKey(x => x.IDDistrict).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Gender).WithMany(x => x.t_Customers).HasForeignKey(x => x.IDGender).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_Country).WithMany(x => x.t_Customers).HasForeignKey(x => x.IDCountry).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_CustomerOrStaff).WithMany(x => x.t_Customers).HasForeignKey(x => x.IDCustomerOrStaff).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.t_User).WithMany(x => x.t_Customers).HasForeignKey(x => x.IDAccount).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

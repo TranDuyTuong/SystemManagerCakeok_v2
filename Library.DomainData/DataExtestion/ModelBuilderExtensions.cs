@@ -121,13 +121,14 @@ namespace Library.DomainData.DataExtestion
             modelBuilder.Entity<T_UserRole>().HasData(
                 new T_UserRole()
                 {
-                    IDUserRole = 1, 
+                    IDUserRole = 1,
                     CreateDate = DateTime.UtcNow,
                     Status = true,
                     IDRole = IdRole_1,
                     IDStaff = IdStaff_1
                 }
                 );
+
 
         }
     }
