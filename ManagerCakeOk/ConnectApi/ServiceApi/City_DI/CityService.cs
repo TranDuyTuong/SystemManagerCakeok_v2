@@ -2,6 +2,7 @@
 using ManagerCakeOk.ConnectApi.InterfaceApi.ICity_DI;
 using ManagerCakeOk.Models.M_Citys;
 using Newtonsoft.Json;
+using System.Drawing.Printing;
 using System.Security.Policy;
 
 namespace ManagerCakeOk.ConnectApi.ServiceApi.City_DI
@@ -51,6 +52,39 @@ namespace ManagerCakeOk.ConnectApi.ServiceApi.City_DI
             return JsonConvert.DeserializeObject<GetAllCity_M>(body);
         }
 
+        // TODO: GET DATA EDIT CITY
+        public async Task<EditCity> getEditCitys(int idCity)
+        {
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration["BaseAddress"]);
+            var response = await client.GetAsync($"/api/City/GetEditCity?idCity={idCity}");
+            var body = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode == false)
+            {
+                EditCity myDeserializedObjList = (EditCity)JsonConvert.DeserializeObject(body, typeof(EditCity));
+
+                return myDeserializedObjList;
+            }
+            return JsonConvert.DeserializeObject<EditCity>(body);
+        }
+
+        public async Task<NotificationCity> postEditCity(int idCity, string name)
+        {
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration["BaseAddress"]);
+            var requestContent = new MultipartFormDataContent();
+            requestContent.Add(new StringContent(string.IsNullOrEmpty(name) ? "" : name.ToString()), "Name");
+
+            var response = await client.PutAsync($"/api/City/" + idCity, requestContent);
+            var body = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode == false)
+            {
+                NotificationCity myDeserializedObjList = (NotificationCity)JsonConvert.DeserializeObject(body, typeof(NotificationCity));
+
+                return myDeserializedObjList;
+            }
+            return JsonConvert.DeserializeObject<NotificationCity>(body);
+        }
 
     }
 }

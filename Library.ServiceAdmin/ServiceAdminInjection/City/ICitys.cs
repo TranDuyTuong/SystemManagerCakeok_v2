@@ -24,7 +24,7 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
         //Edit City
         Task<EditCity> EditCityGet(int Id);
 
-        Task<NotificationCity> EditCityPost(int Id, string Name);
+        Task<NotificationCity> EditCityPost(EditCity request);
 
         //Change Status City
         Task<EditCity> ChangeStatusCityGet(int Id);

@@ -111,17 +111,18 @@ namespace ManagerCakeOk_Api.Controllers
 
         // TODO: API SHOW INFOMATION EDIT CITY
         [HttpGet(Name ="GetEditCity")]
-        public IActionResult GetEditCity(int idCity)
+        public async Task<IActionResult> GetEditCity(int idCity)
         {
-            var result = _context.EditCityGet(idCity);
+            var result = await _context.EditCityGet(idCity);
             return Ok(result);
         }
 
         // TODO: API POST EDIT CITY
-        [HttpPost(Name = "PostEditCity")]
-        public async Task<IActionResult> PostEditCity(int idCity, string nameCity)
+        [HttpPut(Name = "Id")]
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> PostEditCity([FromRoute] int Id, [FromForm] EditCity request)
         {
-            var result = await _context.EditCityPost(idCity, nameCity);
+            var result = await _context.EditCityPost(request);
             return Ok(result);
         }
 

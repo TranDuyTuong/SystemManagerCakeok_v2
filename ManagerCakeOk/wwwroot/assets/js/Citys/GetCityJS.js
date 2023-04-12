@@ -137,7 +137,7 @@ $(document).on('click', 'button[name="BtnEditCity"]', function () {
     $("#ErrorHelp").empty();
     var IdCity = $(this).closest("tr").attr("id");
     $.ajax({
-        url: "/Citys/PageEditMusic",
+        url: "/Citys/PageEditCity",
         type: "get",
         data: {
             Id: IdCity
@@ -167,7 +167,7 @@ $("#Btn_Update").click(function () {
         var Id = $("#TxtEditIDCity").val();
         var Name = $("#TxtEditCity").val();
         $.ajax({
-            url: "/Citys/EditMuisc",
+            url: "/Citys/EditCity",
             type: "post",
             data: {
                 Id: Id,

@@ -12,6 +12,8 @@ namespace ManagerCakeOk.ConnectApi.InterfaceApi.ICity_DI
         Task<DetailCity> detailCity(int id, int pageSize, int pageIndex);
 
         // TODO: SHOW INFOMATION EDIT CITY BY ID
-        Task<>
+        Task<EditCity> getEditCitys(int idCity);
+
+        Task<NotificationCity> postEditCity(int idCity, string name);
     }
 }

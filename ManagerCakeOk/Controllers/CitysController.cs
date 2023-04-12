@@ -84,16 +84,16 @@ namespace ManagerCakeOk.Controllers
         // TODO: EDIT CITY
         //Edit City
         [HttpGet]
-        public async Task<IActionResult> PageEditMusic(int Id)
+        public async Task<IActionResult> PageEditCity(int Id)
         {
-            var Result = await context.EditCityGet(Id);
+            var Result = await context.getEditCitys(Id);
             return new JsonResult(Result);
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditMuisc(int Id, string Name)
+        public async Task<IActionResult> EditCity(int Id, string Name)
         {
-            var result = await context.EditCityPost(Id, Name);
+            var result = await context.postEditCity(Id, Name);
             return new JsonResult(result);
         }
 

@@ -111,17 +111,17 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
             return City;
         }
 
-        public async Task<NotificationCity> EditCityPost(int Id, string Name)
+        public async Task<NotificationCity> EditCityPost(EditCity request)
         {
             var ResultData = new NotificationCity();
-            var FindData = await this.unitOfWork.cityRepo.Get(Id);
+            var FindData = await this.unitOfWork.cityRepo.Get(request.Id);
             if(FindData.IDCity == 0)
             {
                 ResultData.Id = 2; //not find id city
             }
             else
             {
-                FindData.Name = Name;
+                FindData.Name = request.Name;
                 this.unitOfWork.cityRepo.Update(FindData);
                 this.unitOfWork.Commit();
                 ResultData.Id = 1; // update city success
