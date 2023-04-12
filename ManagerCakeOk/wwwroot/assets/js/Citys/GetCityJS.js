@@ -12,6 +12,7 @@ function GetAllCitys() {
     $("#TotalCity").empty();
     $("#PageItem").empty();
     $("#ItemInPage").empty();
+    $("#totalSeach").empty();
     var count = 0;
     $.ajax({
         url: "/Citys/GetAllCitys",
@@ -19,10 +20,13 @@ function GetAllCitys() {
         data: {
             Index: PageIndex,
             Size: PageSize,
-            //Seach: Seach,
-            //Sort: Sort
+            Seach: Seach,
+            Sort: Sort
         },
         success: function (Result) {
+            if (Result.totalSeachCity != 0) {
+                $("#totalSeach").append("Đã Tìm Thấy: " + Result.totalSeachCity);
+            }
             $.each(Result.l_City, function (key, item) {
                 var Html = "";
                 count++;

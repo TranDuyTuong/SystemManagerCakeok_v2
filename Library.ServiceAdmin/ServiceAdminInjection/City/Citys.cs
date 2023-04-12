@@ -170,9 +170,6 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
             var Result = new DetailCity();
             var Request = await this.unitOfWork.cityRepo.Get(Id);
             var QueryDistrict = await this.unitOfWork.cityRepo.GetAllDistrictByCityID(Request.IDCity);
-            Result.Id = Request.IDCity;
-            Result.Name = Request.Name;
-            Result.Status = Request.Status;
             if(QueryDistrict.Count() != 0)
             {
                 foreach (var item in QueryDistrict)
@@ -188,8 +185,13 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
             }
             else
             {
+             
                 Result.L_District = new List<GetAllDistrict>();
             }
+            Result.Id = Request.IDCity;
+            Result.Name = Request.Name;
+            Result.Status = Request.Status;
+            Result.TotalDistrict = Result.L_District.Count();
             return Result;
         }
 

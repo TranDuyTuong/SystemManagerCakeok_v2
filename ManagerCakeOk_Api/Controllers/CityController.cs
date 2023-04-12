@@ -21,15 +21,27 @@ namespace ManagerCakeOk_Api.Controllers
 
         // TODO: API GET ALL CITY
         [HttpGet(Name ="GetAllCity")]
-        public IActionResult GetAllCity(int PageSize, int PageIndex)
+        public IActionResult GetAllCity(int PageSize, int PageIndex, string Seach)
         {
             // TODO: GET DATA FROM DI
-            var result = _context.GetAllCitys(); 
+            var result = _context.GetAllCitys();
 
-            // TODO: PADING CITY
+            // TODO: CHECK SEACH
             var listCity_GetAll = new GetAllCity_M();
-            listCity_GetAll.TotalCity = result.Count();
-            listCity_GetAll.l_City = result.Skip((PageIndex - 1)*PageSize).Take(PageSize).OrderBy(x => x.NameCity).ToList();
+            if (Seach == "ErrorNotSeach")
+            {
+                // TODO: PADING CITY
+                listCity_GetAll.TotalCity = result.Count();
+                listCity_GetAll.l_City = result.Skip((PageIndex - 1) * PageSize).Take(PageSize).OrderBy(x => x.NameCity).ToList();
+            }
+            else
+            {
+                var cityWasSeach = result.Where(x => x.NameCity.Contains(Seach));
+                // TODO: PADING CITY
+                listCity_GetAll.TotalCity = result.Count();
+                listCity_GetAll.TotalSeachCity = cityWasSeach.Count();
+                listCity_GetAll.l_City = cityWasSeach.Skip((PageIndex - 1) * PageSize).Take(PageSize).OrderBy(x => x.NameCity).ToList();
+            }
 
             return Ok(listCity_GetAll);
         }
@@ -131,10 +143,19 @@ namespace ManagerCakeOk_Api.Controllers
 
         // TODO: API DETAIL CITY
         [HttpGet(Name = "DetailCity")]
-        public async Task<IActionResult> DetailCity(int idCity)
+        public async Task<IActionResult> DetailCity(int idCity, int pageIndex, int pageSize)
         {
             var result = await _context.DetailCity(idCity);
-            return Ok(result);
+
+            // TODO: PADING DISTRICT BY ID CITY
+            var modelResult = new DetailCity();
+            modelResult.TotalDistrict = result.TotalDistrict;
+            modelResult.L_District = result.L_District.Skip((pageIndex - 1)*pageSize).Take(pageSize).ToList();
+            modelResult.Name = result.Name;
+            modelResult.Status = result.Status;
+            modelResult.Id = result.Id;
+
+            return Ok(modelResult);
         }
     }
 }

@@ -1,5 +1,8 @@
-﻿using ManagerCakeOk.ConnectApi.InterfaceApi.ICity_DI;
+﻿using Library.ViewModel.Admin.V_City;
+using ManagerCakeOk.ConnectApi.InterfaceApi.ICity_DI;
+using ManagerCakeOk.Models.M_Citys;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.NetworkInformation;
 
 namespace ManagerCakeOk.Controllers
 {
@@ -19,10 +22,80 @@ namespace ManagerCakeOk.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllCitys(int Index, int Size)
+        public async Task<IActionResult> GetAllCitys(int Index, int Size, string Seach, int Sort)
         {
-            var result = await context.getAllCitys(Index, Size);
+            // TODO: GET DATA FROM DI API
+            var result = new GetAllCity_M();
+            if (Seach != null)
+            {
+                result = await context.getAllCitys(Index, Size, Seach);
+            }
+            else
+            {
+                result = await context.getAllCitys(Index, Size, "ErrorNotSeach");
+            }           
+
+            // TODO: FUNCTION SORT
+            var resultPading = new GetAllCity_M();
+
+            resultPading.TotalCity = result.TotalCity;
+            resultPading.TotalSeachCity = result.TotalSeachCity;
+            List<GetAllCitys> L_Sort = new List<GetAllCitys>();
+            switch (Sort)
+            {
+                case 1:
+                    L_Sort = result.l_City.OrderByDescending(x => x.Id).ToList();
+                    resultPading.l_City = L_Sort;
+                    break;
+                case -1:
+                    L_Sort = result.l_City.OrderBy(x => x.Id).ToList();
+                    resultPading.l_City = L_Sort;
+                    break;
+                case 2:
+                    L_Sort = result.l_City.OrderByDescending(x => x.NameCity).ToList();
+                    resultPading.l_City = L_Sort;
+                    break;
+                case -2:
+                    L_Sort = result.l_City.OrderBy(x => x.NameCity).ToList();
+                    resultPading.l_City = L_Sort;
+                    break;
+                default:
+                    resultPading.l_City = result.l_City;
+                    break;
+            }
+            return new JsonResult(resultPading);
+        }
+
+        // TODO: DETAIL CITY
+        [HttpGet]
+        public IActionResult PageDetailCity(int Id)
+        {
+            ViewBag.IdCity = Id;
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> DetailCity(int Id, int PageSize, int PageIndex)
+        {
+            var result = await context.detailCity(Id, PageSize, PageIndex);
             return new JsonResult(result);
         }
+
+        // TODO: EDIT CITY
+        //Edit City
+        [HttpGet]
+        public async Task<IActionResult> PageEditMusic(int Id)
+        {
+            var Result = await context.EditCityGet(Id);
+            return new JsonResult(Result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditMuisc(int Id, string Name)
+        {
+            var result = await context.EditCityPost(Id, Name);
+            return new JsonResult(result);
+        }
+
     }
 }

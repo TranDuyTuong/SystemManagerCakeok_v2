@@ -18,13 +18,29 @@ namespace ManagerCakeOk.ConnectApi.ServiceApi.City_DI
             _httpClientFactory = httpClientFactory;
         }
 
+        // TODO: DETAIL CITY API 
+        public async Task<DetailCity> detailCity(int id, int pageSize, int pageIndex)
+        {
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration["BaseAddress"]);
+            var response = await client.GetAsync($"/api/City/DetailCity?idCity={id}&pageIndex={pageIndex}&pageSize={pageSize}");
+            var body = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode == false)
+            {
+                DetailCity myDeserializedObjList = (DetailCity)JsonConvert.DeserializeObject(body, typeof(DetailCity));
+
+                return myDeserializedObjList;
+            }
+            return JsonConvert.DeserializeObject<DetailCity>(body);
+        }
+
         // TODO: CALL API GET ALL CITY
-        public async Task<GetAllCity_M> getAllCitys(int pageIndex, int pageSize)
+        public async Task<GetAllCity_M> getAllCitys(int pageIndex, int pageSize, string seach)
         {
             //var getToken = "tuong";
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_configuration["BaseAddress"]);
-            var response = await client.GetAsync($"/api/City/GetAllCity?PageSize={pageSize}&PageIndex={pageIndex}");
+            var response = await client.GetAsync($"/api/City/GetAllCity?PageSize={pageSize}&PageIndex={pageIndex}&Seach={seach}");
             var body =  await response.Content.ReadAsStringAsync();
             if (response.IsSuccessStatusCode == false)
             {

@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewData["Title"] = "Chi Tiết Tỉnh/Tp";
+    Layout = "~/Views/Shared/_PageHome.cshtml";
+}
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Chi Tiết Tỉnh/TP</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Trang Chủ</a></li>
+                <li class="breadcrumb-item"><a asp-action="PageCity" asp-controller="City">Danh Sách Tỉnh/TP</a></li>
+                <li class="breadcrumb-item active">Chi Tiết Tỉnh/TP</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+        <div class="row">
+
+            <!-- Left side columns -->
+            <div class="col-lg-12">
+                <div class="row">
+                    <p>Danh Sách Các Quận/Huyện Thuộc <b id="NameCity"></b> | <b id="StatusCity"></b></p>
+
+                    <p style="text-align:right; font-size:16px; font-family: initial">
+                        Tổng Số Quận/Huyện: <b style="color: red;" id="TotalDitrist"></b>
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Tên Quận/Huyện</th>
+                                    <th scope="col">Trạng Thái</th>
+                                </tr>
+                            </thead>
+                            <tbody id="BodyData">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <p style="text-align:right;">Trang : <b id="PageItem" style="color:red;"></b>/<b id="ItemInPage" style="color:black;"></b></p>
+                    </div>
+                    <div class="row" style="clear: both;">
+                        <div id="pagination" class="pagination"></div>
+                    </div>
+                </div>
+            </div><!-- End Left side columns -->
+            <!-- Right side columns -->
+
+
+        </div><!-- End Right side columns -->
+    </section>
+
+    <!--Modal Edit City-->
+    <div class="modal" tabindex="-1" id="M_EditCity" style="background-color: #000000a6;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cập Nhật Tỉnh/Tp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="BtnClose"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Mã Tỉnh/Tp</label>
+                        <input type="text" class="form-control" id="TxtEditIDCity" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Tên Tỉnh/Tp</label>
+                        <input type="text" class="form-control" id="TxtEditCity" />
+                        <div id="ErrorHelp" class="form-text" style="color: red;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="Btn_Update"><i class="fas fa-edit"></i> Thay Đổi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Modal Edit Status-->
+    <div class="modal" tabindex="-1" id="M_EditStatus" style="background-color: #000000a6;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đổi Trạng Thái Tỉnh/Tp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="BtnCloseStatus"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="TxtIDCity" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="TxtNameCity" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="TxtStatusCity" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Lựa Chọn Trạng Thái</label>
+                        <select class="form-select" id="TxtSelectStatus">
+                            <option selected value="0">-- Chọn Trạng Thái --</option>
+                            <option value="1">Đang Hoạt Động</option>
+                            <option value="2">Ngưng Hoạt Động</option>
+                        </select>
+                        <div id="ErrorStatus" class="form-text" style="color: red;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="Btn_UpdateSetting"><i class="fas fa-edit"></i> Thay Đổi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal loading create Music -->
+    <div class="modal" tabindex="-1" style="background-color: #000000a6;" id="Modal_Loading">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background:none; border:none;">
+                <div class="modal-body">
+                    <div class="row" style="margin-top:200px;">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <div class="spinner-grow text-primary" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                            <div class="spinner-grow text-secondary" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                            <div class="spinner-grow text-success" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main><!-- End #main -->
+<input type="hidden" value="@ViewBag.IdCity" id="IdCity" />
+@section Scripts{
+    <script src="~/assets/js/jquery.twbsPagination.min.js" asp-append-version="true"></script>
+    <script src="~/assets/js/Citys/DetailCityJS.js" asp-append-version="true"></script>
+}
+

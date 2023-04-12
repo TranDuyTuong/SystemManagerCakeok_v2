@@ -6,5 +6,6 @@ namespace ManagerCakeOk.Models.M_Citys
     {
         public List<GetAllCitys> l_City { get; set; }
         public int TotalCity { get; set; }
+        public int TotalSeachCity { get; set; }
     }
 }
