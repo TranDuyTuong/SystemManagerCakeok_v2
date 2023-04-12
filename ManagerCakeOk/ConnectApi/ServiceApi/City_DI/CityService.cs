@@ -73,9 +73,10 @@ namespace ManagerCakeOk.ConnectApi.ServiceApi.City_DI
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_configuration["BaseAddress"]);
             var requestContent = new MultipartFormDataContent();
+            requestContent.Add(new StringContent(string.IsNullOrEmpty(idCity.ToString()) ? "" : name.ToString()), "IdStr");
             requestContent.Add(new StringContent(string.IsNullOrEmpty(name) ? "" : name.ToString()), "Name");
 
-            var response = await client.PutAsync($"/api/City/" + idCity, requestContent);
+            var response = await client.PostAsync($"/api/City/PutEditCity", requestContent);
             var body = await response.Content.ReadAsStringAsync();
             if (response.IsSuccessStatusCode == false)
             {

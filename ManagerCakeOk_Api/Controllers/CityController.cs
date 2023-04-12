@@ -20,7 +20,7 @@ namespace ManagerCakeOk_Api.Controllers
         }
 
         // TODO: API GET ALL CITY
-        [HttpGet(Name ="GetAllCity")]
+        [HttpGet(Name = "GetAllCity")]
         public IActionResult GetAllCity(int PageSize, int PageIndex, string Seach)
         {
             // TODO: GET DATA FROM DI
@@ -102,7 +102,7 @@ namespace ManagerCakeOk_Api.Controllers
         }
 
         // TODO: API GET 10 CITY NEW
-        [HttpGet(Name ="GetTenCityNew")]
+        [HttpGet(Name = "GetTenCityNew")]
         public IActionResult GetTenCityNew()
         {
             var result = _context.GetTenCityNew();
@@ -110,7 +110,7 @@ namespace ManagerCakeOk_Api.Controllers
         }
 
         // TODO: API SHOW INFOMATION EDIT CITY
-        [HttpGet(Name ="GetEditCity")]
+        [HttpGet(Name = "GetEditCity")]
         public async Task<IActionResult> GetEditCity(int idCity)
         {
             var result = await _context.EditCityGet(idCity);
@@ -118,9 +118,9 @@ namespace ManagerCakeOk_Api.Controllers
         }
 
         // TODO: API POST EDIT CITY
-        [HttpPut(Name = "Id")]
+        [HttpPost(Name = "PostEditCity")]
         [Consumes("multipart/form-data")]
-        public async Task<IActionResult> PostEditCity([FromRoute] int Id, [FromForm] EditCity request)
+        public async Task<IActionResult> PostEditCity([FromForm] EditCity request)
         {
             var result = await _context.EditCityPost(request);
             return Ok(result);
