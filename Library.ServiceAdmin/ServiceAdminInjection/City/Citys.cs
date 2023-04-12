@@ -19,7 +19,7 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
         }
 
         //Change Status City
-        public async Task<EditCity> ChnageStatusCityGet(int Id)
+        public async Task<EditCity> ChangeStatusCityGet(int Id)
         {
             var ModelData = new EditCity();
             var Result = await this.unitOfWork.cityRepo.Get(Id);

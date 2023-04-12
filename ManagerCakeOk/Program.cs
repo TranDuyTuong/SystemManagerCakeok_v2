@@ -1,7 +1,17 @@
+using ManagerCakeOk.ConnectApi.InterfaceApi.ICity_DI;
+using ManagerCakeOk.ConnectApi.ServiceApi.City_DI;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add service call api
+builder.Services.AddHttpClient();
+
+// Add services DI
+builder.Services.AddTransient<ICityService, CityService>();
+
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
@@ -10,8 +20,6 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
         options.SlidingExpiration = true;
     });
-
-
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 // Add services to the container.

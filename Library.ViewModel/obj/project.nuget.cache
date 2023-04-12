@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "EROaDBQzPQLCJ/SXDqGd1Wm/BD6lUuvZ4dTGOE41tfGv0Jn1dCC88vE57dR/9wCaXLb3HMY1zWPjvXMPz4FHnQ==",
+  "dgSpecHash": "9AIP7qVKBN9VnYcThpGZfAtHzXsqcUPhZtx+EDAIXD5ZmTuCg2YchUAOnzlQLYumSMoKMlV5uU+2Fcz3sirgtw==",
   "success": true,
-  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -8,10 +8,10 @@ namespace Library.ViewModel.Admin.V_SignIn
 {
     public class V_Login
     {
-        public string Username { get; set; }
+        public string gmal { get; set; }
 
-        public string Password { get; set; }
+        public string passWord { get; set; }
 
-        //public string RequestPath { get; set; }
+        public string requestPath { get; set; }
     }
 }

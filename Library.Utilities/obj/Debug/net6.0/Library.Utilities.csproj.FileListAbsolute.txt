@@ -22,15 +22,3 @@ D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManag
 D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\refint\Library.Utilities.dll
 D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\Library.Utilities.pdb
 D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\ref\Library.Utilities.dll
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\bin\Debug\net6.0\Library.Utilities.deps.json
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\bin\Debug\net6.0\Library.Utilities.dll
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\bin\Debug\net6.0\Library.Utilities.pdb
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\Library.Utilities.csproj.AssemblyReference.cache
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\Library.Utilities.GeneratedMSBuildEditorConfig.editorconfig
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\Library.Utilities.AssemblyInfoInputs.cache
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\Library.Utilities.AssemblyInfo.cs
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\Library.Utilities.csproj.CoreCompileInputs.cache
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\Library.Utilities.dll
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\refint\Library.Utilities.dll
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\Library.Utilities.pdb
-D:\Project\v_2\SystemManagerCakeok_v2\Library.Utilities\obj\Debug\net6.0\ref\Library.Utilities.dll

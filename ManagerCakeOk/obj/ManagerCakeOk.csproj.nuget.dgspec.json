@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj": {}
+    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj": {}
   },
   "projects": {
-    "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj": {
+    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj",
-        "projectName": "ManagerCakeOk",
-        "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj",
-        "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
-        "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\ManagerCakeOk\\obj\\",
+        "projectUniqueName": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj",
+        "projectName": "Library.ViewModel",
+        "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,6 +28,71 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Project\\v_2\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj",
+        "projectName": "ManagerCakeOk",
+        "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\ManagerCakeOk\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj": {
+                "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

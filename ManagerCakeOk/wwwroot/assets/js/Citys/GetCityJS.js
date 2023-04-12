@@ -19,11 +19,11 @@ function GetAllCitys() {
         data: {
             Index: PageIndex,
             Size: PageSize,
-            Seach: Seach,
-            Sort: Sort
+            //Seach: Seach,
+            //Sort: Sort
         },
         success: function (Result) {
-            $.each(Result.l_PaingCitys, function (key, item) {
+            $.each(Result.l_City, function (key, item) {
                 var Html = "";
                 count++;
                 Html += '<tr id="' + item.id + '">';
@@ -46,9 +46,9 @@ function GetAllCitys() {
             })
             $("#PageItem").append(PageIndex);
             $("#ItemInPage").append(count);
-            $("#TotalCity").append(Result.total);
+            $("#TotalCity").append(Result.totalCity);
             //paing
-            paging(Result.total, function () {
+            paging(Result.totalCity, function () {
                 GetAllCitys();
             })
         }

@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewData["Title"] = "Danh Sách Tỉnh/Tp";
+    Layout = "~/Views/Shared/_PageHome.cshtml";
+}
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Danh Sách Tỉnh/TP</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Trang Chủ</a></li>
+                <li class="breadcrumb-item active">Danh Sách Tỉnh/TP</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+        <div class="row">
+
+            <!-- Left side columns -->
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input id="TxtSeach" onchange="F_SeachCity()" style="margin: 10px 0px;" type="text" class="form-control" placeholder="Nhập Vào Mã, Tên Tỉnh/Tp ..." />
+                    </div>
+
+                    <p>
+                        <a class="btn btn-primary" asp-action="PageCreateCity" asp-controller="Citys" data-bs-toggle="tooltip" data-bs-placement="top" title="Thêm Mới">
+                            <i class="fas fa-plus-square"></i>
+                        </a>
+                        <a class="btn btn-primary" onclick="ReloadPage()" data-bs-toggle="tooltip" data-bs-placement="top" title="Tải Lại Trang">
+                            <i class="fas fa-sync-alt"></i>
+                        </a>
+                    </p>
+                    <p style="text-align:right; font-size:16px; font-family: initial">
+                        Tổng Số: <b style="color: red;" id="TotalCity"></b>
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT <i class="fas fa-sort" onclick="SortId()"></i> </th>
+                                    <th scope="col">Tên Tỉnh/TP <i class="fas fa-sort" onclick="SortName()"></i></th>
+                                    <th scope="col">Trạng Thái</th>
+                                    <th scope="col">Lựa Chọn</th>
+                                </tr>
+                            </thead>
+                            <tbody id="BodyData">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8"></div>
+                        <div class="col-md-2">
+                            <select class="form-select" id="SelectItem">
+                                <option selected value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <p style="text-align:right;">Trang : <b id="PageItem" style="color:red;"></b>/<b id="ItemInPage" style="color:black;"></b></p>
+                        </div>
+                    </div>
+                    <div class="row" style="clear: both;">
+                        <div id="pagination" class="pagination"></div>
+                    </div>
+                </div>
+            </div><!-- End Left side columns -->
+            <!-- Right side columns -->
+
+
+        </div><!-- End Right side columns -->
+    </section>
+
+    <!--Modal Edit City-->
+    <div class="modal" tabindex="-1" id="M_EditCity" style="background-color: #000000a6;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cập Nhật Tỉnh/Tp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="BtnClose"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Mã Tỉnh/Tp</label>
+                        <input type="text" class="form-control" id="TxtEditIDCity" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Tên Tỉnh/Tp</label>
+                        <input type="text" class="form-control" id="TxtEditCity" />
+                        <div id="ErrorHelp" class="form-text" style="color: red;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="Btn_Update"><i class="fas fa-edit"></i> Thay Đổi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Modal Edit Status-->
+    <div class="modal" tabindex="-1" id="M_EditStatus" style="background-color: #000000a6;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đổi Trạng Thái Tỉnh/Tp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="BtnCloseStatus"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="TxtIDCity" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="TxtNameCity" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="TxtStatusCity" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Lựa Chọn Trạng Thái</label>
+                        <select class="form-select" id="TxtSelectStatus">
+                            <option selected value="0">-- Chọn Trạng Thái --</option>
+                            <option value="1">Đang Hoạt Động</option>
+                            <option value="2">Ngưng Hoạt Động</option>
+                        </select>
+                        <div id="ErrorStatus" class="form-text" style="color: red;"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="Btn_UpdateSetting"><i class="fas fa-edit"></i> Thay Đổi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal loading create Music -->
+    <div class="modal" tabindex="-1" style="background-color: #000000a6;" id="Modal_Loading">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background:none; border:none;">
+                <div class="modal-body">
+                    <div class="row" style="margin-top:200px;">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <div class="spinner-grow text-primary" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                            <div class="spinner-grow text-secondary" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                            <div class="spinner-grow text-success" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main><!-- End #main -->
+@section Scripts{
+    <script src="~/assets/js/jquery.twbsPagination.min.js" asp-append-version="true"></script>
+    <script src="~/assets/js/Citys/GetCityJS.js" asp-append-version="true"></script>
+}
+

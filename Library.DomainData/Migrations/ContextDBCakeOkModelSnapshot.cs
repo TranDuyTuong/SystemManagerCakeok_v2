@@ -1430,7 +1430,7 @@ namespace Library.DomainData.Migrations
                         new
                         {
                             IDRole = new Guid("d6e0ac8a-7eed-4865-a6f0-3f5a8ba60bdc"),
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 43, 957, DateTimeKind.Utc).AddTicks(2978),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 50, 940, DateTimeKind.Utc).AddTicks(1641),
                             Discripttion = "Admin Quản Lý Toàn Bộ Hệ Thống",
                             Id = new Guid("00000000-0000-0000-0000-000000000000"),
                             NameRole = "Admin",
@@ -1470,7 +1470,7 @@ namespace Library.DomainData.Migrations
                         new
                         {
                             IDUserRole = 1,
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 44, 199, DateTimeKind.Utc).AddTicks(9866),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 51, 64, DateTimeKind.Utc).AddTicks(8865),
                             IDRole = new Guid("d6e0ac8a-7eed-4865-a6f0-3f5a8ba60bdc"),
                             IDStaff = new Guid("d8b14017-6271-4f1c-8c50-c06b06fcd28b"),
                             Status = true
@@ -1737,7 +1737,7 @@ namespace Library.DomainData.Migrations
                             IDStaff = new Guid("d8b14017-6271-4f1c-8c50-c06b06fcd28b"),
                             Address = "Khu 13, Xã Long Đức, Huyện Long Thành, Tỉnh Đồng Nai",
                             Birthday = new DateTime(2000, 3, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 44, 199, DateTimeKind.Utc).AddTicks(9822),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 51, 64, DateTimeKind.Utc).AddTicks(8815),
                             FullName = "Trần Duy Tường",
                             IDAccount = new Guid("723d5b79-51fa-45d1-8ed3-14c53580110f"),
                             IDCity = 1,
@@ -1776,14 +1776,14 @@ namespace Library.DomainData.Migrations
                         new
                         {
                             IDStaffOrChef = new Guid("b9c709e5-0ae2-4ca2-b5b1-1c6509fba56c"),
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 43, 957, DateTimeKind.Utc).AddTicks(2944),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 50, 940, DateTimeKind.Utc).AddTicks(1621),
                             Name = "Nhân Viên Hỗ Trợ",
                             Status = true
                         },
                         new
                         {
                             IDStaffOrChef = new Guid("fb0ad9bd-9be3-4557-ac8b-1001d48ec3b5"),
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 43, 957, DateTimeKind.Utc).AddTicks(2945),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 50, 940, DateTimeKind.Utc).AddTicks(1622),
                             Name = "Đầu Bếp Làm Bánh",
                             Status = true
                         });
@@ -1935,28 +1935,28 @@ namespace Library.DomainData.Migrations
                         new
                         {
                             IDCountry = 1,
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 43, 957, DateTimeKind.Utc).AddTicks(2769),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 50, 940, DateTimeKind.Utc).AddTicks(1541),
                             Name = "Việt Nam",
                             Status = true
                         },
                         new
                         {
                             IDCountry = 2,
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 43, 957, DateTimeKind.Utc).AddTicks(2772),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 50, 940, DateTimeKind.Utc).AddTicks(1545),
                             Name = "Lào",
                             Status = true
                         },
                         new
                         {
                             IDCountry = 3,
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 43, 957, DateTimeKind.Utc).AddTicks(2774),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 50, 940, DateTimeKind.Utc).AddTicks(1546),
                             Name = "Campuchia",
                             Status = true
                         },
                         new
                         {
                             IDCountry = 4,
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 43, 957, DateTimeKind.Utc).AddTicks(2775),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 50, 940, DateTimeKind.Utc).AddTicks(1546),
                             Name = "Thái Lan",
                             Status = true
                         });
@@ -2062,13 +2062,13 @@ namespace Library.DomainData.Migrations
                         new
                         {
                             IDCustomerOrStaff = 1,
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 43, 957, DateTimeKind.Utc).AddTicks(2888),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 50, 940, DateTimeKind.Utc).AddTicks(1593),
                             Name = "Khách Hàng"
                         },
                         new
                         {
                             IDCustomerOrStaff = 2,
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 43, 957, DateTimeKind.Utc).AddTicks(2890),
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 50, 940, DateTimeKind.Utc).AddTicks(1597),
                             Name = "Nhân Viên"
                         });
                 });
@@ -2335,15 +2335,15 @@ namespace Library.DomainData.Migrations
                         {
                             IDAccount = new Guid("723d5b79-51fa-45d1-8ed3-14c53580110f"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "cbf4dc3f-f707-4ccf-9afe-8f70e63a09a1",
-                            CreateDate = new DateTime(2023, 4, 11, 13, 45, 44, 199, DateTimeKind.Utc).AddTicks(9315),
+                            ConcurrencyStamp = "1a09da9f-12a1-4563-b64a-626ef41034e6",
+                            CreateDate = new DateTime(2023, 4, 12, 1, 28, 51, 64, DateTimeKind.Utc).AddTicks(8069),
                             Email = "duytuong0503@gmail.com",
                             EmailConfirmed = true,
                             IDCustomerOrStaff = 2,
                             Id = new Guid("723d5b79-51fa-45d1-8ed3-14c53580110f"),
                             LockoutEnabled = false,
-                            PassWord = "AQAAAAIAAYagAAAAENMP2QN/QtvqWXBaX3OcRx5wKJ0mJkUW5DqAp+kNJ6PLFk4CzsyTz/Od6cWrqPAxcg==",
-                            PasswordHash = "AQAAAAIAAYagAAAAENaw3AkEMcgtCDmM4XMa8PKlVb+wQtc9Ipc8Xjqu+BW0uGsoSyeWhDNm1cWsDJTMoA==",
+                            PassWord = "AQAAAAIAAYagAAAAEDHyh/iJKUjLQHehGxvYYOBn0oXsQHmadTXDjctoiZR3CUM9sAHlMfUuq0CMh1UKsg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJE8FoXLwY1SkCSrRS2wfiR8gkv3FCL0BanP5KsYHwGVTymQBKMb3stIwYHLJYiOhA==",
                             PhoneNumber = "0335520146",
                             PhoneNumberConfirmed = false,
                             TwoFactorEnabled = false,
