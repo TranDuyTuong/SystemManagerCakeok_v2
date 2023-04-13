@@ -1,5 +1,7 @@
 using ManagerCakeOk.ConnectApi.InterfaceApi.ICity_DI;
+using ManagerCakeOk.ConnectApi.InterfaceApi.IDistrict_DI;
 using ManagerCakeOk.ConnectApi.ServiceApi.City_DI;
+using ManagerCakeOk.ConnectApi.ServiceApi.District_DI;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 
@@ -10,6 +12,7 @@ builder.Services.AddHttpClient();
 
 // Add services DI
 builder.Services.AddTransient<ICityService, CityService>();
+builder.Services.AddTransient<IDistrictService, DistrictService>();
 
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

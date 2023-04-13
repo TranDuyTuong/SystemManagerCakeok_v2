@@ -77,7 +77,7 @@ namespace ManagerCakeOk_Api.Controllers
                         {
                             ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
                             var rowcount = worksheet.Dimension.Rows;
-                            for (int row = 2; row <= rowcount; row++)
+                            for (int row = 3; row <= rowcount; row++)
                             {
                                 L_City.Add(new CreateCity
                                 {
@@ -137,7 +137,6 @@ namespace ManagerCakeOk_Api.Controllers
 
         // TODO: API CHANGE STATUS CITY POST
         [HttpGet(Name = "PostChangeStatusCity")]
-        [Consumes("multipart/form-data")]
         public async Task<IActionResult> PostChangeStatusCity(int IdCity, bool Status)
         {
             var request = new EditCity()

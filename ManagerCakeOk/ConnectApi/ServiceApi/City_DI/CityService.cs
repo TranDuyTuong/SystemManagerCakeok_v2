@@ -4,6 +4,7 @@ using ManagerCakeOk.Models.M_Citys;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Drawing.Printing;
+using System.Net.Http.Headers;
 using System.Security.Policy;
 using System.Xml.Linq;
 
@@ -112,7 +113,7 @@ namespace ManagerCakeOk.ConnectApi.ServiceApi.City_DI
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_configuration["BaseAddress"]);
 
-            var response = await client.GetAsync($"/api/City/PostChangeStatusCity?IdCity={idCity}&Status{status}");
+            var response = await client.GetAsync($"/api/City/PostChangeStatusCity?IdCity={idCity}&Status={status}");
             var body = await response.Content.ReadAsStringAsync();
             if (response.IsSuccessStatusCode == false)
             {
@@ -165,36 +166,29 @@ namespace ManagerCakeOk.ConnectApi.ServiceApi.City_DI
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_configuration["BaseAddress"]);
 
-            //if (request.fileExcelCity.Length > 0)
-            //{
+            var fileName = ContentDispositionHeaderValue.Parse(request.fileExcelCity.ContentDisposition).FileName.Trim('"');
 
-            //}
-
-            //var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-
-            //using (var content = new MultipartFormDataContent())
-            //{
-            //    content.Add(new StreamContent(file.OpenReadStream())
-            //    {
-            //        Headers =
-            //        {
-            //            ContentLength = file.Length,
-            //            ContentType = new MediaTypeHeaderValue(file.ContentType)
-            //        }
-            //    }, "File", fileName);
-
-            //    var response = await client.PostAsync(_options.WebApiPortionOfUrl, content);
-            //}
-
-            var response = await client.PostAsync($"/api/City/CreateCityMultiline/");
-            var body = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode == false)
+            using (var content = new MultipartFormDataContent())
             {
-                NotificationCity myDeserializedObjList = (NotificationCity)JsonConvert.DeserializeObject(body, typeof(NotificationCity));
+                content.Add(new StreamContent(request.fileExcelCity.OpenReadStream())
+                {
+                    Headers =
+                    {
+                        ContentLength = request.fileExcelCity.Length,
+                        ContentType = new MediaTypeHeaderValue(request.fileExcelCity.ContentType)
+                    }
+                }, "fileExcelCity", fileName);
 
-                return myDeserializedObjList;
+                var response = await client.PostAsync($"/api/City/CreateCityMultiline/", content);
+                var body = await response.Content.ReadAsStringAsync();
+                if (response.IsSuccessStatusCode == false)
+                {
+                    NotificationCity myDeserializedObjList = (NotificationCity)JsonConvert.DeserializeObject(body, typeof(NotificationCity));
+
+                    return myDeserializedObjList;
+                }
+                return JsonConvert.DeserializeObject<NotificationCity>(body);
             }
-            return JsonConvert.DeserializeObject<NotificationCity>(body);
         }
 
     }
