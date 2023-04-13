@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Library.ViewModel.Admin.V_City
 {
-    public class CreateFileCityEX: TokenUser
+    public class CreateFileCityEX
     {
         public IFormFile fileExcelCity {  get; set; }
     }

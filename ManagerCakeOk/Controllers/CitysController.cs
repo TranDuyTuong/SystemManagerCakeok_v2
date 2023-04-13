@@ -2,6 +2,7 @@
 using ManagerCakeOk.ConnectApi.InterfaceApi.ICity_DI;
 using ManagerCakeOk.Models.M_Citys;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
 using System.Net.NetworkInformation;
 
 namespace ManagerCakeOk.Controllers
@@ -82,7 +83,6 @@ namespace ManagerCakeOk.Controllers
         }
 
         // TODO: EDIT CITY
-        //Edit City
         [HttpGet]
         public async Task<IActionResult> PageEditCity(int Id)
         {
@@ -97,5 +97,64 @@ namespace ManagerCakeOk.Controllers
             return new JsonResult(result);
         }
 
+        // TODO: UPDATE STATUS CITY
+        [HttpGet]
+        public async Task<IActionResult> ChangeStatusCityGet(int Id)
+        {
+            var Request = await context.getUpdateStatusCity(Id);
+            return new JsonResult(Request);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangeStatusCity(int Id, int IdStatus)
+        {
+            bool Status;
+            if (IdStatus == 1)
+            {
+                Status = true;
+            }
+            else
+            {
+                Status = false;
+            }
+            var Result = await context.postUpdateStatusCity(Id, Status);
+            return new JsonResult(Result);
+        }
+
+        // TODO: CREATE CITY
+        [HttpGet]
+        public IActionResult PageCreateCity()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateCity(string NameCity)
+        {
+            var C_City = new CreateCity();
+            C_City.NameCity = NameCity;
+            var result = await context.postCreateCity(C_City);
+            return new JsonResult(result);
+        }
+
+        // TODO: CREATE MUPLTINE CITY FILE EXCEL
+        [HttpPost]
+        public async Task<IActionResult> CreateMupliteCity(ImportExcelFileCity request)
+        {
+            var formRequest = new CreateFileCityEX()
+            {
+                fileExcelCity = request.FileExcel
+            };
+            var result = await context.postCreateCityByExcelFile(formRequest);
+            return new JsonResult(result);
+        }
+
+        // TODO: GET 10 CITY NEW
+        [HttpGet]
+        public async Task<IActionResult> GetTenCityNew()
+        {
+            var result = await context.getTennNewCity();
+            return new JsonResult(result);
+        }
     }
 }

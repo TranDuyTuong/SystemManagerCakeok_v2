@@ -15,5 +15,19 @@ namespace ManagerCakeOk.ConnectApi.InterfaceApi.ICity_DI
         Task<EditCity> getEditCitys(int idCity);
 
         Task<NotificationCity> postEditCity(int idCity, string name);
+
+        // TODO: CHANGE UPDATE STATUS CITY
+        Task<EditCity> getUpdateStatusCity(int idCity);
+
+        Task<NotificationCity> postUpdateStatusCity(int idCity,  bool status);
+
+        // TODO: CRETAE CITY
+        Task<NotificationCity> postCreateCity(CreateCity request);
+
+        // TODO: GET 10 NEW CITYS
+        Task<List<GetAllCitys>> getTennNewCity();
+
+        // TODO: CREATE MUPLILINE CITYS
+        Task<NotificationCity> postCreateCityByExcelFile(CreateFileCityEX request);
     }
 }

@@ -29,17 +29,17 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
             return ModelData;
         }
 
-        public async Task<NotificationCity> ChangeStatusPost(int Id, bool Status)
+        public async Task<NotificationCity> ChangeStatusPost(EditCity request)
         {
             var Modal = new NotificationCity();
-            var Result = await this.unitOfWork.cityRepo.Get(Id);
+            var Result = await this.unitOfWork.cityRepo.Get(request.Id);
             if(Result.IDCity == 0)
             {
                 Modal.Id = 1; //Not find Id City
             }
             else
             {
-                Result.Status = Status;
+                Result.Status = request.Status;
                 this.unitOfWork.cityRepo.Update(Result);
                 this.unitOfWork.Commit();
                 Modal.Id = 2; //Update Status Success

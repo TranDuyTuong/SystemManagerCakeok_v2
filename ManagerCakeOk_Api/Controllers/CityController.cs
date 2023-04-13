@@ -48,13 +48,9 @@ namespace ManagerCakeOk_Api.Controllers
 
         // TODO: API CREATE CITY
         [HttpPost(Name = "CreateCity")]
-        public IActionResult CreateCity(string nameCity)
+        public IActionResult CreateCity([FromForm] CreateCity request)
         {
-            var request = new CreateCity()
-            {
-                NameCity = nameCity,
-                Status = true
-            };
+            request.Status = true;
             // TODO: CREATE CITY
             var result = _context.CreateCity(request);
 
@@ -85,7 +81,7 @@ namespace ManagerCakeOk_Api.Controllers
                             {
                                 L_City.Add(new CreateCity
                                 {
-                                    NameCity = worksheet.Cells[row, 1].Value.ToString().Trim(),
+                                    NameCity = worksheet.Cells[row, 2].Value.ToString().Trim(),
                                     Status = true
                                 });
                             }
@@ -122,6 +118,11 @@ namespace ManagerCakeOk_Api.Controllers
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> PostEditCity([FromForm] EditCity request)
         {
+            // TODO: CONVER IDstr string to ID int
+            request.Id = Convert.ToInt32(request.IdStr);
+            request.Status = true;
+
+            // TODO: SAVE IN TO DB
             var result = await _context.EditCityPost(request);
             return Ok(result);
         }
@@ -136,9 +137,15 @@ namespace ManagerCakeOk_Api.Controllers
 
         // TODO: API CHANGE STATUS CITY POST
         [HttpGet(Name = "PostChangeStatusCity")]
-        public async Task<IActionResult> PostChangeStatusCity(int idCity, bool status)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> PostChangeStatusCity(int IdCity, bool Status)
         {
-            var result = await _context.ChangeStatusPost(idCity, status);
+            var request = new EditCity()
+            {
+                Id = IdCity,
+                Status = Status
+            };
+            var result = await _context.ChangeStatusPost(request);
             return Ok(result);
         }
 

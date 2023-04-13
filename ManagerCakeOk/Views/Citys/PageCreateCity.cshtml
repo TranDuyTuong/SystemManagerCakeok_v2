@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewData["Title"] = "Tạo Mới Tỉnh/Tp";
+    Layout = "~/Views/Shared/_PageHome.cshtml";
+}
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Danh Sách Tỉnh/TP</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Trang Chủ</a></li>
+                <li class="breadcrumb-item"><a asp-action="PageCity" asp-controller="Citys">Danh Sách Tỉnh/TP</a></li>
+                <li class="breadcrumb-item active">Thêm Mới Tỉnh/TP</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+        <div class="row">
+
+            <!-- Left side columns -->
+            <div class="col-lg-12">
+                <div class="row">
+                    <p>
+                        <a asp-action="PageCreateCity" asp-controller="Citys" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Làm Mới">
+                            <i class="fas fa-sync-alt"></i>
+                        </a>
+                        <button id="Btn_Modal" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Thêm mới bằng File">
+                            <i class="fas fa-file-excel"></i>
+                        </button>
+                    </p>
+                </div>
+            </div><!-- End Left side columns -->
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        <label class="form-label">Tên Tỉnh/Tp</label>
+                        <input type="text" class="form-control" placeholder="Nhập vào tên Tỉnh/Tp ...." id="TxtCitys" />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">*</label>
+                        <p id="ErrorCity" class="form-text" style="color:red;"></p>
+                    </div>
+                    <hr style="margin: 10px 10px;" />
+                    <p style="text-align: right">
+                        <button style="width: auto; margin: 10px 10px;" class="btn btn-primary" id="Btn_Create"><i class="fas fa-save"></i> Thêm Mới</button>
+                    </p>
+                </div>
+            </div>
+            <hr />
+            <div class="col-md-12">
+                <div class="row">
+                    <p style="text-align: left; font-size: 15px; font-family: initial">
+                        Danh Sách 10 Tỉnh/Tp Mới Tạo
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT <i class="fas fa-sort"></i> </th>
+                                    <th scope="col">Tên Tỉnh/TP <i class="fas fa-sort"></i></th>
+                                    <th scope="col">Trạng Thái <i class="fas fa-sort"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody id="BodyData">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div><!-- End Right side columns -->
+    </section>
+</main><!-- End #main -->
+<!--Modal show modal add muplti data with file-->
+<div class="modal" tabindex="-1" style="background-color: #000000a6;" id="Modal_AddMuplti">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Thêm Mới Tỉnh/Tp Bằng File Excel</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="Btn_Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Chọn File Dữ Liệu</label>
+                    <input class="form-control" type="file" id="formFile" />
+                    <div id="ErrorFile" class="form-text" style="color: red;"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Btn_FuilterData"><i class="fas fa-filter"></i> Lấy Dữ Liệu</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal loading create Music -->
+<div class="modal" tabindex="-1" style="background-color: #000000a6;" id="Modal_Loading">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background:none; border:none;">
+            <div class="modal-body">
+                <div class="row" style="margin-top:200px;">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="spinner-grow text-primary" role="status">
+                            <span class="visually-hidden"></span>
+                        </div>
+                        <div class="spinner-grow text-secondary" role="status">
+                            <span class="visually-hidden"></span>
+                        </div>
+                        <div class="spinner-grow text-success" role="status">
+                            <span class="visually-hidden"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/assets/js/Citys/CitysJS.js" asp-append-version="true"></script>
+}
+
+

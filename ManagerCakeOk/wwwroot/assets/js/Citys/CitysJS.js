@@ -19,7 +19,7 @@ $("#Btn_Create").click(function () {
                 NameCity: NameCity
             },
             success: function (result) {
-                if (result == true) {
+                if (result.statusCity == true) {
                     toastr.success("Thông Báo Thành Công !", "Tạo mới một Tỉnh/Tp thành công.");
                     $("#TxtCitys").val('');
                 } else {

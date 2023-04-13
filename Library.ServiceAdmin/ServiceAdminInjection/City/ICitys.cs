@@ -29,7 +29,7 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
         //Change Status City
         Task<EditCity> ChangeStatusCityGet(int Id);
 
-        Task<NotificationCity> ChangeStatusPost(int Id, bool Status);
+        Task<NotificationCity> ChangeStatusPost(EditCity request);
 
         //Detail City
         Task<DetailCity> DetailCity(int Id);
