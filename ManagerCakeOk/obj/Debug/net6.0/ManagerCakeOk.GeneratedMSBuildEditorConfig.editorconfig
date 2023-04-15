@@ -9,69 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ManagerCakeOk
 build_property.RootNamespace = ManagerCakeOk
-build_property.ProjectDir = D:\Project\v_2\SystemManagerCakeok_v2\ManagerCakeOk\
+build_property.ProjectDir = D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\ManagerCakeOk\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = D:\Project\v_2\SystemManagerCakeok_v2\ManagerCakeOk
+build_property.MSBuildProjectDirectory = D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\ManagerCakeOk
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Citys/PageCity.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Citys/PageCity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eXNcUGFnZUNpdHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Citys/PageCreateCity.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Citys/PageCreateCity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eXNcUGFnZUNyZWF0ZUNpdHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Citys/PageDetailCity.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Citys/PageDetailCity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eXNcUGFnZURldGFpbENpdHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Home/Index.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Districts/CreateDistrict.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzdHJpY3RzXENyZWF0ZURpc3RyaWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Districts/PageDistrict.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzdHJpY3RzXFBhZ2VEaXN0cmljdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Home/Login.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Home/PartialHeaderMenu.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Home/PartialHeaderMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXJ0aWFsSGVhZGVyTWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Home/PartialSibarMenu.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Home/PartialSibarMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXJ0aWFsU2liYXJNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Home/Privacy.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Secured/Index.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Secured/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJlZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Shared/Error.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/_ViewImports.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/_ViewStart.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Shared/_Layout.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5zgjlnyg6e
 
-[D:/Project/v_2/SystemManagerCakeok_v2/ManagerCakeOk/Views/Shared/_PageHome.cshtml]
+[D:/Development_Project/Dev_CareOk/BackEnd_CakeOk/SytemCakeOK_V1_DATA/SystemManagerCakeok_v2/ManagerCakeOk/Views/Shared/_PageHome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdlSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-0db3qe39q6

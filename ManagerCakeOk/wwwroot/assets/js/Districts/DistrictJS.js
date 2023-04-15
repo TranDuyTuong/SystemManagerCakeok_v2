@@ -8,7 +8,7 @@ function LoadCity() {
     $("#ErrorDistrict").empty();
     $("#TxtSelectCity").empty();
     $.ajax({
-        url: "/Citys/JsonGetAllCity/",
+        url: "/Districts/GetAllCityForCreateDistrict/",
         type: "get",
         success: function (result) {
             var htmlDefaul = '<option value="0" selected>-- Vui lòng chọn ---</option>';

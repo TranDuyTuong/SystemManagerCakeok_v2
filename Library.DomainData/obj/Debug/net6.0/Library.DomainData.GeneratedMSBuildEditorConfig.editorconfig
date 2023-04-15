@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Library.DomainData
-build_property.ProjectDir = D:\Project\v_2\SystemManagerCakeok_v2\Library.DomainData\
+build_property.ProjectDir = D:\Development_Project\Dev_CareOk\BackEnd_CakeOk\SytemCakeOK_V1_DATA\SystemManagerCakeok_v2\Library.DomainData\

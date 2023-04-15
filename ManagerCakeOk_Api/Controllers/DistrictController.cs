@@ -32,7 +32,7 @@ namespace ManagerCakeOk_Api.Controllers
             }
             else
             {
-                var districtWasSeach = result.Where(x => x.NameCity.Contains(seach));
+                var districtWasSeach = result.Where(x => x.Name.Contains(seach));
                 // TODO: PADING CITY
                 listDistrict_GetAll.TotalDistric = result.Count();
                 listDistrict_GetAll.TotalSeachDistrict = districtWasSeach.Count();

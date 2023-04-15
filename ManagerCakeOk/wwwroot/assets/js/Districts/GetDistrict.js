@@ -4,21 +4,27 @@
 
 var PageIndex = 1;
 var PageSize = 10;
+var Seach;
 //load data district
 function LoadDataDitrict() {
     $("#BodyData").empty();
     $("#TotalDistrict").empty();
     $("#PageItem").empty();
     $("#ItemInPage").empty();
+    $("#txtResultSeach").empty();
     var count = 0;
     $.ajax({
         url: "/Districts/GetAllDistrict",
         type: "get",
         data: {
             PageSize: PageSize,
-            PageIndex: PageIndex
+            PageIndex: PageIndex,
+            seach: Seach
         },
         success: function (result) {
+            if (result.totalSeachDistrict != 0) {
+                $("#txtResultSeach").append("Đã Tìm Thấy: " + result.totalSeachDistrict + " Kết Quả");
+            };
             $.each(result.l_District, function (key, item) {
                 var Html = "";
                 count++;
@@ -41,9 +47,9 @@ function LoadDataDitrict() {
             })
             $("#PageItem").append(PageIndex);
             $("#ItemInPage").append(count);
-            $("#TotalDistrict").append(result.total);
+            $("#TotalDistrict").append(result.totalDistric);
             //paing
-            paging(result.total, function () {
+            paging(result.totalDistric, function () {
                 LoadDataDitrict();
             })
         }
@@ -240,3 +246,10 @@ $("#Btn_UpdateSetting").click(function () {
     }
     return;
 });
+
+// SeachDistrict
+function F_SeachDistrict() {
+    Seach = $("#TxtSeach").val();
+    LoadDataDitrict();
+    return;
+}

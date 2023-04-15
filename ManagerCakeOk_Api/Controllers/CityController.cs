@@ -164,5 +164,15 @@ namespace ManagerCakeOk_Api.Controllers
 
             return Ok(modelResult);
         }
+
+        // TODO: API GET ALL CITY FOR SELECTION CREATE DISTRICT
+        [HttpGet(Name = "GetAllCityForSelection")]
+        public async Task<IActionResult> GetAllCityForSelection()
+        {
+            var query = _context.GetAllCitys();
+            var result = query.Where(x => x.Status == true).OrderBy(x => x.NameCity).ToList();
+            return Ok(result);
+
+        }
     }
 }
