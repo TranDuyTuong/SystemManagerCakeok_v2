@@ -23,6 +23,7 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.District
         {
             var result = new NotificationDistirct();
             var CheckIdCity = await this.unitOfWork.cityRepo.Get(request.IdCity);
+
             if(CheckIdCity.IDCity == 0)
             {
                 result.Id = 1; //Not find Id City
@@ -181,6 +182,34 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.District
                 result.Add(data);
             }
             return result;
+        }
+
+        //create district muplite excel file
+        public NotificationDistirct CreateMupliteDistrict(List<CreateDistrict> request)
+        {
+            var ResultData = new NotificationDistirct();
+            if (request.Count() == 0)
+            {
+                ResultData.Id = 2; //Data in file Excel is null
+            }
+            else
+            {
+                List<T_District> L_City = new List<T_District>();
+                foreach (var item in request)
+                {
+                    L_City.Add(new T_District
+                    {
+                        IDCity = item.IdCity,
+                        Name = item.Name,
+                        Status = item.Status
+                    });
+                }
+                IEnumerable<T_District> L_CityCover = L_City;
+                unitOfWork.districtRepo.Insert(L_CityCover);
+                unitOfWork.Commit();
+                ResultData.Id = 3; // Insert Data Excel Muplite Success
+            }
+            return ResultData;
         }
 
 

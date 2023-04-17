@@ -5,6 +5,7 @@ using Library.ServiceAdmin.ServiceAdminInjection.District;
 using Library.ServiceAdmin.ServiceAdminInjection.Gender;
 using Library.ServiceAdmin.ServiceAdminInjection.Marriage;
 using Library.ServiceAdmin.ServiceAdminInjection.Role;
+using Library.ServiceAdmin.ServiceAdminInjection.SignIn;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace Library.ServiceAdmin
             services.AddTransient<Imarriage, Marriage>();
             services.AddTransient<Iroles, Roles>();
             services.AddTransient<IAccount, Account>();
+            services.AddTransient<ISignIn, SignIn>();
             return services;
         }
     }

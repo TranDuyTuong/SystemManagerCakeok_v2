@@ -12,6 +12,7 @@ namespace Library.DataTable.TableUser
         public string Name { get; set; }
         public DateTime CreateDate { get; set; }
         public bool Status { get; set; }
+        public string Symbol { get; set; }
 
         public List<T_Customer> t_Customers { get; set; }
     }

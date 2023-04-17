@@ -1,4 +1,5 @@
-﻿using Library.ViewModel.Admin.V_District;
+﻿using Library.ViewModel.Admin.V_City;
+using Library.ViewModel.Admin.V_District;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,5 +31,8 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.District
 
         //Get All Distric by Id City
         List<GetAllDistrict> GetAllDistrictByIdCity(int IdCity);
+
+        //Create Muplite District
+        NotificationDistirct CreateMupliteDistrict(List<CreateDistrict> request);
     }
 }

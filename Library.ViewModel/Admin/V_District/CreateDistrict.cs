@@ -11,5 +11,6 @@ namespace Library.ViewModel.Admin.V_District
         public string Name { get; set; }
         public int IdCity { get; set; }
         public bool Status { get; set; }
+        public string IdCityStr { get; set; }
     }
 }

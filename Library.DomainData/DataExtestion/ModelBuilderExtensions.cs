@@ -25,12 +25,6 @@ namespace Library.DomainData.DataExtestion
                 new T_City() { IDCity = 6, Name = "Tp.Long Khánh", Status = true },
                 new T_City() { IDCity = 7, Name = "Tp.Huế", Status = true }
                 );
-            modelBuilder.Entity<T_Country>().HasData(
-                new T_Country() { IDCountry = 1, Name = "Việt Nam", Status = true, CreateDate = DateTime.UtcNow },
-                new T_Country() { IDCountry = 2, Name = "Lào", Status = true, CreateDate = DateTime.UtcNow },
-                new T_Country() { IDCountry = 3, Name = "Campuchia", Status = true, CreateDate = DateTime.UtcNow },
-                new T_Country() { IDCountry = 4, Name = "Thái Lan", Status = true, CreateDate = DateTime.UtcNow }
-                );
             modelBuilder.Entity<T_District>().HasData(
                 new T_District() { IDDistrict = 1, Name = "Quận 1", IDCity = 1, Status = true },
                 new T_District() { IDDistrict = 2, Name = "Quận 2", IDCity = 1, Status = true },

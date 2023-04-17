@@ -76,7 +76,6 @@ $("#Btn_Create").click(function () {
                             toastr.success("Thông Báo Thành Công!", "Thêm mới Quận/Huyện thành công");
                             LoadCity();
                             $("#TxtDistrict").val('');
-                            LoadDataDitrict();
                             break;
                     }
                 }
@@ -96,6 +95,64 @@ function CheckCity() {
 function CheckNameDistrict() {
     var Datas = $("#TxtDistrict").val();
     if (Datas.length == 0 || Datas == '') {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+//Create multiple City with file excel
+$("#Btn_Modal").click(function () {
+    $("#Modal_AddMuplti").show();
+});
+
+$("#Btn_Close").click(function () {
+    window.location.reload();
+});
+
+$("#Btn_FuilterData").click(function () {
+    $("#ErrorFile").empty();
+
+    var Vali_File = CheckFileImport();
+    if (Vali_File == false) {
+        $("#ErrorFile").append("Không được bỏ trống file !");
+    } else {
+        var files = $("#formFile").prop("files")
+        var formData = new FormData();
+        for (var i = 0; i < files.length; i++) {
+            formData.append("FileExcel", files[i]);
+        }
+        $("#Modal_Loading").show();
+        $.ajax({
+            url: "/Districts/CreateDistrictExcelFile",
+            type: "post",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function (result) {
+                $("#Modal_Loading").hide();
+                switch (result.id) {
+                    case 1:
+                        toastr.error("Thông Báo Lỗi!", "File Truyền Vào Không Phải Là Excel .xlsx");
+                        break;
+                    case 2:
+                        toastr.error("Thông Báo Lỗi!", "Không Có Dữ Liệu Nào Trong File Excel");
+                        break;
+                    case 3:
+                        toastr.success("Thông Báo Thành Công", "Thêm Danh Sách Quận/Huyện Thành Công");
+                        $("#formFile").val('');
+                        break;
+                }
+                LoadDataDitrict()
+            }
+        })
+    }
+    return;
+});
+
+function CheckFileImport() {
+    var CheckData = $("#formFile").val();
+    if (CheckData.length == 0) {
         return false;
     } else {
         return true;

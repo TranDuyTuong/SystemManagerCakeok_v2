@@ -195,5 +195,59 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
             return Result;
         }
 
+        //Delete city
+        public async Task<NotificationCity> DeleteCity(int Id)
+        {
+            var result = new NotificationCity();
+            var query = await this.unitOfWork.cityRepo.Get(Id);
+            if(query == null)
+            {
+                // not find city
+                result.Id = 1; 
+            }
+            else
+            {
+                bool removeDistirct = RemoveAllDistrictByIdCity(Id);
+                if(removeDistirct == false) {
+                    // remove city but can not list district
+                    result.Id = 2;
+                }
+                else
+                {
+                    // remove city affter remove district
+                    result.Id = 3;
+                }
+                this.unitOfWork.cityRepo.Delete(query);
+            }
+            this.unitOfWork.Commit();
+            return result;
+        }
+
+        /// <summary>
+        /// Remove all District by IdCity
+        /// </summary>
+        private bool RemoveAllDistrictByIdCity(int Id)
+        {
+            var query = this.unitOfWork.districtRepo.GetAll();
+            bool isDelete = false;
+            if(query.Count() == 0)
+            {
+                isDelete = false;
+            }
+            else
+            {
+                var l_DistrictByCity = query.Where(x => x.IDCity == Id);
+                foreach(var item in l_DistrictByCity)
+                {
+                    this.unitOfWork.districtRepo.Delete(item);
+                    this.unitOfWork.Commit();
+                }
+                isDelete = true;
+            }
+            return isDelete;
+            
+        }
+
+
     }
 }

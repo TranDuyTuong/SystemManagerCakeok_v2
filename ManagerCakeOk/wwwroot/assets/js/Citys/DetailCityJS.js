@@ -23,8 +23,10 @@ function LoadData() {
         success: function (result) {
             $("#NameCity").append(result.name)
             if (result.status == true) {
+                document.getElementById("StatusCity").style.color = "green";
                 $("#StatusCity").append("Đang Hoạt Động");
             } else {
+                document.getElementById("StatusCity").style.color = "red";
                 $("#StatusCity").append("Ngưng Hoạt Động");
             }
             $("#TotalDitrist").append(result.totalDistrict);
@@ -70,3 +72,43 @@ function paging(totalRoll, callback) {
         }
     });
 }
+
+//Delete city
+$("#btn_Delete").click(function () {
+    $("#M_DeleteCity").show();
+});
+
+//Cancel delete
+$("#btn_ConfimCancel").click(function () {
+    $("#M_DeleteCity").hide();
+});
+
+//Confirm Delete
+$("#btn_ConfimDelete").click(function () {
+    $("#Modal_Loading").show();
+    $.ajax({
+        url: "/Citys/DeleteCity",
+        type: "post",
+        data: {
+            IdCity: $("#IdCity").val()
+        },
+        success: function (result) {
+            $("#Modal_Loading").hide();
+            switch (result.id) {
+                case 1:
+                    toastr.error("Thông Báo Lỗi!", "Không tìm thấy Tỉnh/Tp cần xóa");
+                    break;
+                case 2:
+                    toastr.success("Thông Báo Thành Công!", "Xóa Tỉnh/Tp thành công (không có Quận/Huyện nào thuộc Tỉnh/Tp này)");
+                    break;
+                case 3:
+                    toastr.success("Thông Báo Thành Công!", "Xóa Tỉnh/Tp thành công");
+                    break;
+                default:
+                    break;
+            }
+            window.location.href = "Citys/PageCity";
+            return;
+        }
+    })
+})

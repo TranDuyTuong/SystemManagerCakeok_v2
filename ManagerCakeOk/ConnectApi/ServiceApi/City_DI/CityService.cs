@@ -191,5 +191,22 @@ namespace ManagerCakeOk.ConnectApi.ServiceApi.City_DI
             }
         }
 
+        // TODO: DELETE CITY
+        public async Task<NotificationCity> deletecity(int idCity)
+        {
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration["BaseAddress"]);
+            var response = await client.DeleteAsync($"/api/City/DeleteCityById?idCity={idCity}");
+            var body = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode == false)
+            {
+                NotificationCity myDeserializedObjList = (NotificationCity)JsonConvert.DeserializeObject(body, typeof(NotificationCity));
+
+                return myDeserializedObjList;
+            }
+            return JsonConvert.DeserializeObject<NotificationCity>(body);
+        }
+
+
     }
 }

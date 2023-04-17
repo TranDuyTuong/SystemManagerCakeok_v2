@@ -9263,19 +9263,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\duytu\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj",
+      "projectUniqueName": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj",
       "projectName": "ManagerCakeOk",
-      "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj",
-      "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
-      "outputPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\ManagerCakeOk\\obj\\",
+      "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\ManagerCakeOk\\ManagerCakeOk.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\ManagerCakeOk\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9289,8 +9289,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj": {
-              "projectPath": "D:\\Development_Project\\Dev_CareOk\\BackEnd_CakeOk\\SytemCakeOK_V1_DATA\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj"
+            "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj": {
+              "projectPath": "D:\\Project\\v_2\\SystemManagerCakeok_v2\\Library.ViewModel\\Library.ViewModel.csproj"
             }
           }
         }

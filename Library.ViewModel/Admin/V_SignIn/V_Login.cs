@@ -8,7 +8,7 @@ namespace Library.ViewModel.Admin.V_SignIn
 {
     public class V_Login
     {
-        public string gmal { get; set; }
+        public string gmail { get; set; }
 
         public string passWord { get; set; }
 

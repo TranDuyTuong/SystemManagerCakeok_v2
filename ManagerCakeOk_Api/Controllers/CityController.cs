@@ -174,5 +174,15 @@ namespace ManagerCakeOk_Api.Controllers
             return Ok(result);
 
         }
+
+        // TODO: API DELETE CITY
+        [HttpDelete( Name = "DeleteCityById")]
+        public IActionResult DeleteCityById(int idCity) {
+            var result = _context.DeleteCity(idCity);
+            return Ok(result);
+        }
+
+
+
     }
 }

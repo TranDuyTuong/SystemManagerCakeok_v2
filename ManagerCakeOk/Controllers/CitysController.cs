@@ -156,5 +156,16 @@ namespace ManagerCakeOk.Controllers
             var result = await context.getTennNewCity();
             return new JsonResult(result);
         }
+
+        // TODO: DELETE CITY
+        [HttpPost]
+        public async Task<IActionResult> DeleteCity(int IdCity)
+        {
+            var result = await context.deletecity(IdCity);
+            return new JsonResult(result);
+        }
+
+
+
     }
 }

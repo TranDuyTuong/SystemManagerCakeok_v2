@@ -29,5 +29,8 @@ namespace ManagerCakeOk.ConnectApi.InterfaceApi.ICity_DI
 
         // TODO: CREATE MUPLILINE CITYS
         Task<NotificationCity> postCreateCityByExcelFile(CreateFileCityEX request);
+
+        // TODO: DELETE CITY
+        Task<NotificationCity> deletecity(int idCity);
     }
 }

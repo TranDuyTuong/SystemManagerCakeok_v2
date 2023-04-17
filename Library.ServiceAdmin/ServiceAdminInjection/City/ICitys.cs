@@ -34,5 +34,8 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.City
         //Detail City
         Task<DetailCity> DetailCity(int Id);
 
+        //Delete City
+        Task<NotificationCity> DeleteCity(int Id);
+
     }
 }
